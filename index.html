@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroWasteX - Transforming Waste Into Wealth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="business.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+                <a href="authority-login.html" class="nav-link">Authority-login</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="hamburger-overlay" id="hamburgerOverlay">
+        <div class="hamburger-menu-content">
+            <button class="close-menu" id="closeMenu">&times;</button>
+            <nav class="hamburger-nav">
+                <a href="#dashboard.html" class="hamburger-link">Dashboard</a>
+                <a href="citizen-training.html" class="hamburger-link">Citizen Training</a>
+                <a href="games-badges.html" class="hamburger-link">Games and Badges</a>
+                <a href="recycling-guide.html" class="hamburger-link">Recycling Guide</a>
+                <a href="rewards-program.html" class="hamburger-link">Rewards Program</a>
+                <a href="community-impact.html" class="hamburger-link">Community Impact</a>
+                <a href="contact-support.html" class="hamburger-link">Contact Support</a>
+            </nav>
+        </div>
+    </div>
+
+    
+    <section class="hero">
+        <div class="hero-background">
+            <img src="environmental.jpg" alt="Environmental Background" class="hero-bg-image">
+        </div>
+        <div class="hero-content">
+            <div class="main-logo">
+                <div class="logo-circle">
+                    <img src="newlogo.png" alt="ZeroWasteX Logo" class="main-logo-img">
+                </div>
+            </div>
+            <h1 class="main-title">
+                <span class="title-green">Zero</span><span class="title-black">Waste</span><span
+                    class="title-green">X</span>
+            </h1>
+
+            <p class="tagline">Transforming Waste Into Wealth</p>
+
+            
+            <div class="quick-actions">
+                <a href="report-waste.html" class="action-btn primary">Report Waste</a>
+                <a href="schedule-pickup.html" class="action-btn secondary">Schedule Pickup</a>
+                <a href="find-center.html" class="action-btn tertiary">Find Center</a>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🗑️</div>
+                    <div class="stat-number" data-target="15420">0</div>
+                    <div class="stat-label">Total Waste Collected (kg)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">♻️</div>
+                    <div class="stat-number" data-target="12850">0</div>
+                    <div class="stat-label">Total Waste Recycled (kg)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number" data-target="8750">0</div>
+                    <div class="stat-label">Waste-to-Energy Generated (kWh)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌱</div>
+                    <div class="stat-number" data-target="2340">0</div>
+                    <div class="stat-label">CO2 Emissions Saved (kg)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="5680">0</div>
+                    <div class="stat-label">Active Citizens Registered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏢</div>
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-label">Recycling Centers Connected</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">Live Waste Collection Map</h2>
+        <div class="map-container">
+            
+            <div class="enhanced-map-content">
+                
+                <div class="map-background">
+                    <div class="grid-overlay"></div>
+                </div>
+                
+                
+                <div class="map-marker" style="top: 25%; left: 20%;">
+                    <div class="marker-dot collection-marker">🗑️</div>
+                    <div class="marker-info">Zone A - 75% Full</div>
+                </div>
+                
+                <div class="map-marker" style="top: 60%; left: 35%;">
+                    <div class="marker-dot collection-marker warning">🗑️</div>
+                    <div class="marker-info">Downtown - 92% Full</div>
+                </div>
+                
+                <div class="map-marker" style="top: 40%; left: 70%;">
+                    <div class="marker-dot recycling-marker">♻️</div>
+                    <div class="marker-info">Recycling Center</div>
+                </div>
+                
+                <div class="map-marker moving-truck" style="top: 30%; left: 25%;">
+                    <div class="marker-dot truck-marker">🚛</div>
+                    <div class="marker-info">Truck WM-101</div>
+                </div>
+                
+                <div class="map-marker moving-truck" style="top: 55%; left: 50%;">
+                    <div class="marker-dot truck-marker">🚛</div>
+                    <div class="marker-info">Truck WM-205</div>
+                </div>
+            </div>
+            
+            
+            <div class="map-overlay">
+                <div class="enhanced-stats">
+                    <h3>🔴 LIVE</h3>
+                    <div class="live-counter">
+                        <span class="counter-number" id="liveCount">12</span>
+                        <span class="counter-label">Active Vehicles</span>
+                    </div>
+                </div>
+                
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot collection"></span>
+                        <span>Collection Points</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot recycling"></span>
+                        <span>Recycling Centers</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot active pulsing"></span>
+                        <span>Active Collections</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-widget">
+                <h3>Environmental Impact Calculator</h3>
+                <div class="calculator-content">
+                    <div class="calculator-input">
+                        <label for="wasteAmount">Waste Amount (kg):</label>
+                        <input type="number" id="wasteAmount" placeholder="Enter amount">
+                        <button class="calculate-btn">Calculate Impact</button>
+                    </div>
+                    <div class="calculator-results">
+                        <div class="result-item">
+                            <span class="result-label">CO2 Saved:</span>
+                            <span class="result-value" id="co2Saved">0 kg</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Energy Generated:</span>
+                            <span class="result-value" id="energyGenerated">0 kWh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Recent Achievements</h2>
+            <div class="ticker-container">
+                <div class="ticker-content">
+                    <div class="ticker-item">🏆 Milestone: 15,000 kg waste collected this month!</div>
+                    <div class="ticker-item">🌟 New recycling center opened in Downtown</div>
+                    <div class="ticker-item">📈 85% recycling rate achieved in Zone A</div>
+                    <div class="ticker-item">🎉 1000+ new citizens joined this week</div>
+                    <div class="ticker-item">💡 Solar panels installed at 3 collection centers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Citizens Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"ZeroWasteX has made waste management so easy in our community. The app is user-friendly and
+                            the pickup service is reliable."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Priya Sharma" class="author-image">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <span>Community Leader</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The rewards program motivates our family to recycle more. We've earned points and
+                            contributed to a cleaner environment."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Rajesh Kumar" class="author-image">
+                            <div class="author-info">
+                                <h4>Rajesh Kumar</h4>
+                                <span>Resident</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a business owner, ZeroWasteX helps us manage our waste efficiently and track our
+                            environmental impact."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Anita Patel" class="author-image">
+                            <div class="author-info">
+                                <h4>Anita Patel</h4>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="tips-section">
+        <div class="container">
+            <h2 class="section-title">Real-time Waste Segregation Tips</h2>
+            <div class="tips-carousel">
+                <div class="tip-card active">
+                    <div class="tip-icon">🗑️</div>
+                    <h3>Organic Waste</h3>
+                    <p>Kitchen scraps, food waste, and garden clippings go in the green bin. These create valuable
+                        compost!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">♻️</div>
+                    <h3>Recyclable Materials</h3>
+                    <p>Clean plastic bottles, paper, cardboard, and metal cans. Rinse containers before disposal.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⚠️</div>
+                    <h3>Hazardous Waste</h3>
+                    <p>Batteries, electronics, and chemicals need special handling. Use designated collection points.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" id="prevTip">‹</button>
+                <button class="carousel-btn next" id="nextTip">›</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZeroWasteX</h3>
+                    <p>Transforming waste into wealth for a sustainable future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@zerowastex.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZeroWasteX. All rights reserved. | Smart India Hackathon Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

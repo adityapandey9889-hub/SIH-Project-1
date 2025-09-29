@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Recycling Guide - Learn to Recycle Right | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recycling-guide.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="business-model.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="recycling-hero">
+        <div class="hero-background">
+            <div class="recycling-particles">
+                <div class="particle">♻️</div>
+                <div class="particle">🌱</div>
+                <div class="particle">🗑️</div>
+                <div class="particle">📦</div>
+                <div class="particle">🥤</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Recycling Guide</span>
+            </div>
+            <h1 class="hero-title">Your Complete Recycling Guide</h1>
+            <p class="hero-subtitle">Learn what, where, and how to recycle everything the right way</p>
+            
+            <!-- Quick Search -->
+            <div class="hero-search">
+                <div class="search-container">
+                    <input type="text" id="recyclingSearch" placeholder="Search for any item... (e.g., plastic bottle, newspaper)" class="search-input">
+                    <button class="search-btn" onclick="searchRecycling()">🔍</button>
+                </div>
+                <div class="popular-searches">
+                    <span>Popular:</span>
+                    <button class="search-tag" onclick="quickSearch('plastic bottle')">Plastic Bottles</button>
+                    <button class="search-tag" onclick="quickSearch('battery')">Batteries</button>
+                    <button class="search-tag" onclick="quickSearch('cardboard')">Cardboard</button>
+                    <button class="search-tag" onclick="quickSearch('glass')">Glass</button>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="recycling-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">♻️</div>
+                    <div class="stat-info">
+                        <span class="stat-number">75%</span>
+                        <span class="stat-label">Can Be Recycled</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-info">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">Energy Saved</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🌳</div>
+                    <div class="stat-info">
+                        <span class="stat-number">17</span>
+                        <span class="stat-label">Trees Saved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="recycling-content">
+        <div class="container">
+            
+            <!-- Search Results -->
+            <section class="search-results" id="searchResults" style="display: none;">
+                <div class="section-header">
+                    <h2 class="section-title">🔍 Search Results</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="results-container" id="resultsContainer">
+                    <!-- Results will be populated here -->
+                </div>
+            </section>
+
+            <!-- Recycling Categories -->
+            <section class="recycling-categories">
+                <div class="section-header">
+                    <h2 class="section-title">♻️ Recycling Categories</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Click on any category to learn detailed recycling instructions</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <!-- Paper & Cardboard -->
+                    <div class="category-card" onclick="openCategory('paper')">
+                        <div class="category-icon">📄</div>
+                        <h3>Paper & Cardboard</h3>
+                        <p>Newspapers, magazines, cardboard boxes, office paper</p>
+                        <div class="category-stats">
+                            <span class="recyclability high">98% Recyclable</span>
+                            <span class="items-count">15+ items</span>
+                        </div>
+                        <div class="category-animation">
+                            <div class="paper-stack">
+                                <div class="paper-sheet"></div>
+                                <div class="paper-sheet"></div>
+                                <div class="paper-sheet"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plastic -->
+                    <div class="category-card" onclick="openCategory('plastic')">
+                        <div class="category-icon">🥤</div>
+                        <h3>Plastic Items</h3>
+                        <p>Bottles, containers, bags, packaging materials</p>
+                        <div class="category-stats">
+                            <span class="recyclability medium">65% Recyclable</span>
+                            <span class="items-count">25+ items</span>
+                        </div>
+                        <div class="category-animation">
+                            <div class="plastic-bottles">
+                                <div class="bottle"></div>
+                                <div class="bottle"></div>
+                                <div class="bottle"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glass -->
+                    <div class="category-card" onclick="openCategory('glass')">
+                        <div class="category-icon">🍶</div>
+                        <h3>Glass Materials</h3>
+                        <p>Bottles, jars, containers, windows</p>
+                        <div class="category-stats">
+                            <span class="recyclability high">100% Recyclable</span>
+                            <span class="items-count">10+ items</span>
+                        </div>
+                        <div class="category-animation">
+                            <div class="glass-items">
+                                <div class="glass-bottle"></div>
+                                <div class="glass-jar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metal -->
+                    <div class="category-card" onclick="openCategory('metal')">
+                        <div class="category-icon">🥫</div>
+                        <h3>Metal Objects</h3>
+                        <p>Cans, foil, appliances, tools</p>
+                        <div class="category-stats">
+                            <span class="recyclability high">95% Recyclable</span>
+                            <span class="items-count">20+ items</span>
+                        </div>
+                        <div class="category-animation">
+                            <div class="metal-cans">
+                                <div class="can"></div>
+                                <div class="can"></div>
+                                <div class="can"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Electronics -->
+                    <div class="category-card" onclick="openCategory('electronics')">
+                        <div class="category-icon">📱</div>
+                        <h3>Electronics</h3>
+                        <p>Phones, computers, batteries, cables</p>
+                        <div class="category-stats">
+                            <span class="recyclability medium">75% Recyclable</span>
+                            <span class="items-count">30+ items</span>
+                        </div>
+                        <div class="category-animation">
+                            <div class="electronics-items">
+                                <div class="phone"></div>
+                                <div class="laptop"></div>
+                                <div class="battery"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Organic Waste -->
+                    <div class="category-card" onclick="openCategory('organic')">
+                        <div class="category-icon">🍃</div>
+                        <h3>Organic Waste</h3>
+                        <p>Food scraps, garden waste, compostables</p>
+                        <div class="category-stats">
+                            <span class="recyclability high">100% Compostable</span>
+                            <span class="items-count">40+ items</span>
+                        </div>
+                        <div class="category-animation">
+                            <div class="organic-items">
+                                <div class="leaf"></div>
+                                <div class="apple"></div>
+                                <div class="compost"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step-by-Step Guide -->
+            <section class="step-guide">
+                <div class="section-header">
+                    <h2 class="section-title">📋 How to Recycle: Step-by-Step</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Follow these simple steps for perfect recycling every time</p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step-item" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>🧹 Clean the Item</h3>
+                            <p>Rinse containers to remove food residue. Empty bottles and cans completely. Remove labels if required.</p>
+                            <div class="step-animation">
+                                <div class="cleaning-demo">
+                                    <div class="dirty-bottle">🥤</div>
+                                    <div class="water-drops">💧</div>
+                                    <div class="clean-bottle">✨</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-arrow">→</div>
+
+                    <div class="step-item" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>🔍 Check Recycling Codes</h3>
+                            <p>Look for recycling symbols and numbers. Different numbers mean different recycling processes.</p>
+                            <div class="step-animation">
+                                <div class="recycling-symbols">
+                                    <div class="symbol">♻️1</div>
+                                    <div class="symbol">♻️2</div>
+                                    <div class="symbol">♻️3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-arrow">→</div>
+
+                    <div class="step-item" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>🗂️ Sort by Category</h3>
+                            <p>Separate items into correct bins: paper, plastic, glass, metal, and electronics.</p>
+                            <div class="step-animation">
+                                <div class="sorting-demo">
+                                    <div class="bins">
+                                        <div class="bin">📄</div>
+                                        <div class="bin">🥤</div>
+                                        <div class="bin">🍶</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-arrow">→</div>
+
+                    <div class="step-item" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>📍 Drop at Collection Points</h3>
+                            <p>Take sorted materials to your local recycling center or schedule a pickup through ZeroWasteX.</p>
+                            <div class="step-animation">
+                                <div class="dropoff-demo">
+                                    <div class="truck">🚛</div>
+                                    <div class="recycling-center">🏭</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Do's and Don'ts -->
+            <section class="dos-donts">
+                <div class="section-header">
+                    <h2 class="section-title">✅❌ Recycling Do's and Don'ts</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="dos-donts-grid">
+                    <!-- Do's Column -->
+                    <div class="dos-column">
+                        <div class="column-header">
+                            <h3>✅ DO's</h3>
+                        </div>
+                        <div class="guidelines-list">
+                            <div class="guideline-item do">
+                                <div class="guideline-icon">🧽</div>
+                                <div class="guideline-text">
+                                    <h4>Clean containers before recycling</h4>
+                                    <p>Rinse food containers to avoid contamination</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item do">
+                                <div class="guideline-icon">🔍</div>
+                                <div class="guideline-text">
+                                    <h4>Check local recycling guidelines</h4>
+                                    <p>Rules vary by location and facility</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item do">
+                                <div class="guideline-icon">📦</div>
+                                <div class="guideline-text">
+                                    <h4>Flatten cardboard boxes</h4>
+                                    <p>Saves space and makes processing easier</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item do">
+                                <div class="guideline-icon">🏷️</div>
+                                <div class="guideline-text">
+                                    <h4>Remove caps from bottles</h4>
+                                    <p>Different materials require separate processing</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item do">
+                                <div class="guideline-icon">🔋</div>
+                                <div class="guideline-text">
+                                    <h4>Use special collection for batteries</h4>
+                                    <p>Hazardous materials need proper handling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Don'ts Column -->
+                    <div class="donts-column">
+                        <div class="column-header">
+                            <h3>❌ DON'Ts</h3>
+                        </div>
+                        <div class="guidelines-list">
+                            <div class="guideline-item dont">
+                                <div class="guideline-icon">🥡</div>
+                                <div class="guideline-text">
+                                    <h4>Don't recycle greasy pizza boxes</h4>
+                                    <p>Oil contamination ruins paper recycling</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item dont">
+                                <div class="guideline-icon">💡</div>
+                                <div class="guideline-text">
+                                    <h4>Don't put light bulbs in glass bin</h4>
+                                    <p>Special disposal required for mercury content</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item dont">
+                                <div class="guideline-icon">🛍️</div>
+                                <div class="guideline-text">
+                                    <h4>Don't recycle plastic bags in bins</h4>
+                                    <p>Return to store drop-off points instead</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item dont">
+                                <div class="guideline-icon">🧻</div>
+                                <div class="guideline-text">
+                                    <h4>Don't recycle tissues or napkins</h4>
+                                    <p>Fibers are too short to be reprocessed</p>
+                                </div>
+                            </div>
+                            <div class="guideline-item dont">
+                                <div class="guideline-icon">🍽️</div>
+                                <div class="guideline-text">
+                                    <h4>Don't mix food waste with recyclables</h4>
+                                    <p>Contamination can ruin entire batches</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recycling Symbols Guide -->
+            <section class="symbols-guide">
+                <div class="section-header">
+                    <h2 class="section-title">🔢 Recycling Symbols Decoded</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Understanding plastic recycling codes and what they mean</p>
+                </div>
+                
+                <div class="symbols-grid">
+                    <div class="symbol-card" data-code="1">
+                        <div class="symbol-icon">♻️1</div>
+                        <h3>PET/PETE</h3>
+                        <p class="symbol-name">Polyethylene Terephthalate</p>
+                        <div class="symbol-examples">
+                            <span>Water bottles</span>
+                            <span>Soda bottles</span>
+                            <span>Food containers</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill high" style="width: 95%"></div>
+                            <span class="bar-text">95% Recyclable</span>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card" data-code="2">
+                        <div class="symbol-icon">♻️2</div>
+                        <h3>HDPE</h3>
+                        <p class="symbol-name">High-Density Polyethylene</p>
+                        <div class="symbol-examples">
+                            <span>Milk jugs</span>
+                            <span>Detergent bottles</span>
+                            <span>Shopping bags</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill high" style="width: 90%"></div>
+                            <span class="bar-text">90% Recyclable</span>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card" data-code="3">
+                        <div class="symbol-icon">♻️3</div>
+                        <h3>PVC</h3>
+                        <p class="symbol-name">Polyvinyl Chloride</p>
+                        <div class="symbol-examples">
+                            <span>Pipes</span>
+                            <span>Wire coatings</span>
+                            <span>Bottles</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill low" style="width: 25%"></div>
+                            <span class="bar-text">25% Recyclable</span>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card" data-code="4">
+                        <div class="symbol-icon">♻️4</div>
+                        <h3>LDPE</h3>
+                        <p class="symbol-name">Low-Density Polyethylene</p>
+                        <div class="symbol-examples">
+                            <span>Plastic bags</span>
+                            <span>Food wraps</span>
+                            <span>Squeezable bottles</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill medium" style="width: 60%"></div>
+                            <span class="bar-text">60% Recyclable</span>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card" data-code="5">
+                        <div class="symbol-icon">♻️5</div>
+                        <h3>PP</h3>
+                        <p class="symbol-name">Polypropylene</p>
+                        <div class="symbol-examples">
+                            <span>Yogurt containers</span>
+                            <span>Bottle caps</span>
+                            <span>Straws</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill medium" style="width: 70%"></div>
+                            <span class="bar-text">70% Recyclable</span>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card" data-code="6">
+                        <div class="symbol-icon">♻️6</div>
+                        <h3>PS</h3>
+                        <p class="symbol-name">Polystyrene</p>
+                        <div class="symbol-examples">
+                            <span>Foam cups</span>
+                            <span>Take-out containers</span>
+                            <span>Packing materials</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill low" style="width: 15%"></div>
+                            <span class="bar-text">15% Recyclable</span>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card" data-code="7">
+                        <div class="symbol-icon">♻️7</div>
+                        <h3>OTHER</h3>
+                        <p class="symbol-name">Mixed Plastics</p>
+                        <div class="symbol-examples">
+                            <span>Multi-layer packaging</span>
+                            <span>Water cooler bottles</span>
+                            <span>Custom containers</span>
+                        </div>
+                        <div class="recyclability-bar">
+                            <div class="bar-fill low" style="width: 10%"></div>
+                            <span class="bar-text">10% Recyclable</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Local Centers -->
+            <section class="local-centers">
+                <div class="section-header">
+                    <h2 class="section-title">📍 Find Recycling Centers Near You</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Locate the nearest recycling facilities and drop-off points</p>
+                </div>
+                
+                <div class="location-finder">
+                    <div class="finder-input">
+                        <input type="text" id="locationInput" placeholder="Enter your city or PIN code" class="location-search">
+                        <button class="find-btn" onclick="findCenters()">Find Centers</button>
+                    </div>
+                    
+                    <div class="centers-list" id="centersList">
+                        <div class="center-card">
+                            <div class="center-info">
+                                <h3>Green Earth Recycling Center</h3>
+                                <p class="center-address">📍 123 Environmental Drive, Green City - 400001</p>
+                                <div class="center-details">
+                                    <span class="center-hours">⏰ 9 AM - 6 PM</span>
+                                    <span class="center-phone">📞 +91 98765 43210</span>
+                                    <span class="center-distance">📏 2.5 km away</span>
+                                </div>
+                                <div class="accepted-materials">
+                                    <span class="material-tag">Paper</span>
+                                    <span class="material-tag">Plastic</span>
+                                    <span class="material-tag">Glass</span>
+                                    <span class="material-tag">Metal</span>
+                                </div>
+                            </div>
+                            <div class="center-actions">
+                                <button class="center-btn">Get Directions</button>
+                                <button class="center-btn secondary">Call Now</button>
+                            </div>
+                        </div>
+
+                        <div class="center-card">
+                            <div class="center-info">
+                                <h3>EcoWaste Solutions</h3>
+                                <p class="center-address">📍 456 Recycling Road, Sustainability Square - 400002</p>
+                                <div class="center-details">
+                                    <span class="center-hours">⏰ 8 AM - 8 PM</span>
+                                    <span class="center-phone">📞 +91 98765 54321</span>
+                                    <span class="center-distance">📏 4.1 km away</span>
+                                </div>
+                                <div class="accepted-materials">
+                                    <span class="material-tag">Electronics</span>
+                                    <span class="material-tag">Batteries</span>
+                                    <span class="material-tag">Hazardous</span>
+                                    <span class="material-tag">Textiles</span>
+                                </div>
+                            </div>
+                            <div class="center-actions">
+                                <button class="center-btn">Get Directions</button>
+                                <button class="center-btn secondary">Call Now</button>
+                            </div>
+                        </div>
+
+                        <div class="center-card">
+                            <div class="center-info">
+                                <h3>Municipal Recycling Hub</h3>
+                                <p class="center-address">📍 789 Clean Street, Eco Township - 400003</p>
+                                <div class="center-details">
+                                    <span class="center-hours">⏰ 24/7 Drop-off</span>
+                                    <span class="center-phone">📞 +91 98765 65432</span>
+                                    <span class="center-distance">📏 6.8 km away</span>
+                                </div>
+                                <div class="accepted-materials">
+                                    <span class="material-tag">All Materials</span>
+                                    <span class="material-tag">Bulk Items</span>
+                                    <span class="material-tag">Organic</span>
+                                </div>
+                            </div>
+                            <div class="center-actions">
+                                <button class="center-btn">Get Directions</button>
+                                <button class="center-btn secondary">Call Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tips Section -->
+            <section class="recycling-tips">
+                <div class="section-header">
+                    <h2 class="section-title">💡 Pro Recycling Tips</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Expert tips to maximize your recycling impact</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">💧</div>
+                        <h3>Clean = Green</h3>
+                        <p>One dirty container can contaminate an entire batch of recyclables. Always rinse before recycling!</p>
+                        <div class="tip-impact">Impact: <span>+40% recycling efficiency</span></div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">📦</div>
+                        <h3>Flatten Boxes</h3>
+                        <p>Flattened cardboard saves 30% more space in recycling trucks and processing facilities.</p>
+                        <div class="tip-impact">Impact: <span>+30% transport efficiency</span></div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🏷️</div>
+                        <h3>Remove Labels</h3>
+                        <p>While not always necessary, removing labels helps create higher quality recycled materials.</p>
+                        <div class="tip-impact">Impact: <span>+25% material quality</span></div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🔋</div>
+                        <h3>Battery Safety</h3>
+                        <p>Never throw batteries in regular bins. Take them to designated collection points for safe processing.</p>
+                        <div class="tip-impact">Impact: <span>Prevents toxic contamination</span></div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">📱</div>
+                        <h3>E-waste Properly</h3>
+                        <p>Electronics contain valuable metals. Use certified e-waste recyclers to recover precious materials.</p>
+                        <div class="tip-impact">Impact: <span>Recovers 95% of materials</span></div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🌱</div>
+                        <h3>Compost at Home</h3>
+                        <p>Start home composting for organic waste. It's the most eco-friendly disposal method available.</p>
+                        <div class="tip-impact">Impact: <span>Zero transport emissions</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Category Modal -->
+    <div class="category-modal" id="categoryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalCategoryTitle">Category Details</h2>
+                <button class="close-modal" onclick="closeCategoryModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalCategoryBody">
+                <!-- Category details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZeroWasteX Recycling</h3>
+                    <p>Your complete guide to responsible recycling and waste management.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#categories">Recycling Categories</a></li>
+                        <li><a href="#centers">Find Centers</a></li>
+                        <li><a href="#symbols">Recycling Codes</a></li>
+                        <li><a href="#tips">Expert Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: recycling@zerowastex.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZeroWasteX. All rights reserved. | Smart India Hackathon Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="recycling-guide.js"></script>
+    
+</body>
+</html>
+<style>
+    /* Recycling Guide Page Styles */
+
+/* Hero Section */
+.recycling-hero {
+    background: linear-gradient(135deg, #4caf50 0%, #2e8b57 50%, #1e5d3a 100%);
+    color: white;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.recycling-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    animation: recycleFloat 10s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 25%; right: 15%; animation-delay: 2s; }
+.particle:nth-child(3) { top: 60%; left: 20%; animation-delay: 4s; }
+.particle:nth-child(4) { bottom: 30%; right: 10%; animation-delay: 6s; }
+.particle:nth-child(5) { bottom: 15%; left: 30%; animation-delay: 8s; }
+
+@keyframes recycleFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.15; }
+    25% { transform: translateY(-20px) rotate(90deg); opacity: 0.25; }
+    50% { transform: translateY(-40px) rotate(180deg); opacity: 0.3; }
+    75% { transform: translateY(-20px) rotate(270deg); opacity: 0.25; }
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #fff, #90ee90, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* Hero Search */
+.hero-search {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 20px 25px 20px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #2e8b57, #4caf50);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #1e5d3a, #2e8b57);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.popular-searches {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
+
+.popular-searches span {
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.search-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.search-tag:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Recycling Stats */
+.recycling-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 160px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #90ee90;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-top: 2px;
+}
+
+/* Main Content */
+.recycling-content {
+    padding: 80px 0;
+    background: #f8fffe;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1e5d3a;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4caf50, #2e8b57);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Results */
+.search-results {
+    margin-bottom: 100px;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Categories Grid */
+.recycling-categories {
+    margin-bottom: 100px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: #4caf50;
+}
+
+.category-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.category-card h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1e5d3a;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.category-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.category-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recyclability {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.recyclability.high { background: #d4edda; color: #155724; }
+.recyclability.medium { background: #fff3cd; color: #856404; }
+.recyclability.low { background: #f8d7da; color: #721c24; }
+
+.items-count {
+    color: #2e8b57;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Category Animations */
+.category-animation {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.2;
+}
+
+.paper-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.paper-sheet {
+    width: 30px;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    animation: paperStack 3s ease-in-out infinite;
+}
+
+.paper-sheet:nth-child(2) { animation-delay: 0.5s; }
+.paper-sheet:nth-child(3) { animation-delay: 1s; }
+
+@keyframes paperStack {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.plastic-bottles {
+    display: flex;
+    gap: 5px;
+}
+
+.bottle {
+    width: 8px;
+    height: 25px;
+    background: #4caf50;
+    border-radius: 3px 3px 0 0;
+    animation: bottleBounce 2s ease-in-out infinite;
+}
+
+.bottle:nth-child(2) { animation-delay: 0.3s; }
+.bottle:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes bottleBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Step Guide */
+.step-guide {
+    margin-bottom: 100px;
+}
+
+.steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-item {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4caf50, #2e8b57);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.step-content h3 {
+    color: #1e5d3a;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 20px 0 15px;
+}
+
+.step-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.step-arrow {
+    font-size: 2rem;
+    color: #4caf50;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Step Animations */
+.cleaning-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cleaning-demo > div {
+    font-size: 1.5rem;
+    animation: cleaningProcess 3s ease-in-out infinite;
+}
+
+.water-drops { animation-delay: 1s; }
+.clean-bottle { animation-delay: 2s; }
+
+@keyframes cleaningProcess {
+    0%, 33% { opacity: 1; transform: scale(1); }
+    34%, 100% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.recycling-symbols {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.symbol {
+    font-size: 1.2rem;
+    animation: symbolRotate 4s ease-in-out infinite;
+}
+
+.symbol:nth-child(2) { animation-delay: 1s; }
+.symbol:nth-child(3) { animation-delay: 2s; }
+
+@keyframes symbolRotate {
+    0%, 100% { transform: rotate(0deg); opacity: 1; }
+    50% { transform: rotate(360deg); opacity: 0.7; }
+}
+
+/* Do's and Don'ts */
+.dos-donts {
+    margin-bottom: 100px;
+}
+
+.dos-donts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dos-column, .donts-column {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.column-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #f0f0f0;
+}
+
+.dos-column .column-header { border-bottom-color: #4caf50; }
+.donts-column .column-header { border-bottom-color: #f44336; }
+
+.column-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dos-column h3 { color: #2e8b57; }
+.donts-column h3 { color: #d32f2f; }
+
+.guidelines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guideline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.guideline-item.do {
+    background: #f0f8f0;
+    border-left: 4px solid #4caf50;
+}
+
+.guideline-item.dont {
+    background: #fef5f5;
+    border-left: 4px solid #f44336;
+}
+
+.guideline-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.guideline-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.guideline-text h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.guideline-text p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Symbols Guide */
+.symbols-guide {
+    margin-bottom: 100px;
+}
+
+.symbols-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.symbol-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.symbol-card:hover {
+    transform: translateY(-5px);
+    border-color: #4caf50;
+}
+
+.symbol-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+    color: #2e8b57;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.symbol-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e5d3a;
+    margin-bottom: 10px;
+}
+
+.symbol-name {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.symbol-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.symbol-examples span {
+    background: #f0f8f0;
+    color: #2e8b57;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.recyclability-bar {
+    position: relative;
+    background: #e9ecef;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.bar-fill.high { background: linear-gradient(90deg, #4caf50, #66bb6a); }
+.bar-fill.medium { background: linear-gradient(90deg, #ff9800, #ffb74d); }
+.bar-fill.low { background: linear-gradient(90deg, #f44336, #e57373); }
+
+.bar-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+}
+
+/* Local Centers */
+.local-centers {
+    margin-bottom: 100px;
+}
+
+.location-finder {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.finder-input {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.location-search {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.location-search:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.find-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4caf50, #2e8b57);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.find-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+.centers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.center-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    transition: transform 0.3s ease;
+}
+
+.center-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.center-info {
+    flex: 1;
+}
+
+.center-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e5d3a;
+    margin-bottom: 10px;
+}
+
+.center-address {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.center-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.accepted-materials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.material-tag {
+    background: #e6f3ff;
+    color: #2e8b57;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.center-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.center-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.center-btn:not(.secondary) {
+    background: linear-gradient(135deg, #4caf50, #2e8b57);
+    color: white;
+}
+
+.center-btn.secondary {
+    background: transparent;
+    color: #2e8b57;
+    border: 2px solid #2e8b57;
+}
+
+.center-btn:hover {
+    transform: translateY(-2px);
+}
+
+.center-btn:not(.secondary):hover {
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+.center-btn.secondary:hover {
+    background: #2e8b57;
+    color: white;
+}
+
+/* Recycling Tips */
+.recycling-tips {
+    margin-bottom: 50px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 4px solid #4caf50;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tip-icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.tip-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e5d3a;
+    margin-bottom: 15px;
+}
+
+.tip-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tip-impact {
+    background: #e6f3ff;
+    color: #2e8b57;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.tip-impact span {
+    color: #1e5d3a;
+    font-weight: 700;
+}
+
+/* Category Modal */
+.category-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 25px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    color: #1e5d3a;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.close-modal:hover {
+    background: #f0f0f0;
+}
+
+.modal-body {
+    padding: 0 30px 30px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .recycling-stats {
+        gap: 20px;
+    }
+    
+    .stat-item {
+        min-width: 140px;
+        padding: 15px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .dos-donts-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .symbols-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .finder-input {
+        flex-direction: column;
+    }
+    
+    .center-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .center-actions {
+        flex-direction: row;
+        align-self: stretch;
+    }
+    
+    .center-btn {
+        flex: 1;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .search-input {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .popular-searches {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .category-card,
+    .step-item,
+    .tip-card,
+    .symbol-card {
+        padding: 25px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+}
+
+</style>

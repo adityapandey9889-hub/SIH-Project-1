@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games & Badges - Play Your Way to Green | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games-badges.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="business-model.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="games-hero">
+        <div class="hero-background">
+            <div class="game-particles">
+                <div class="particle">🎮</div>
+                <div class="particle">🏆</div>
+                <div class="particle">⭐</div>
+                <div class="particle">🎯</div>
+                <div class="particle">🏅</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Games & Badges</span>
+            </div>
+            <h1 class="hero-title">Play Your Way to a Greener Planet!</h1>
+            <p class="hero-subtitle">Master waste management through fun games and earn amazing badges</p>
+            
+            <!-- Player Stats -->
+            <div class="player-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">🎮</div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="gamesPlayed">0</span>
+                        <span class="stat-label">Games Played</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="badgesEarned">0</span>
+                        <span class="stat-label">Badges Earned</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalScore">0</span>
+                        <span class="stat-label">Total Score</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">#</div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="playerRank">-</span>
+                        <span class="stat-label">Global Rank</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="games-content">
+        <div class="container">
+            
+            <!-- Daily Challenge -->
+            <section class="daily-challenge">
+                <div class="challenge-header">
+                    <h2>🔥 Daily Challenge</h2>
+                    <div class="countdown-timer">
+                        <span>Resets in: </span>
+                        <span id="countdownTimer">12:34:56</span>
+                    </div>
+                </div>
+                
+                <div class="challenge-card" id="dailyChallenge">
+                    <div class="challenge-info">
+                        <h3>🗑️ Speed Sorting Challenge</h3>
+                        <p>Sort 50 waste items correctly in under 2 minutes!</p>
+                        <div class="challenge-rewards">
+                            <span class="reward-item">🏆 Double XP</span>
+                            <span class="reward-item">⭐ 500 Points</span>
+                            <span class="reward-item">🏅 Daily Badge</span>
+                        </div>
+                    </div>
+                    <button class="challenge-btn" onclick="startDailyChallenge()">Start Challenge</button>
+                </div>
+            </section>
+
+            <!-- Featured Games -->
+            <section class="featured-games">
+                <div class="section-header">
+                    <h2 class="section-title">🎮 Featured Games</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Master waste management through exciting interactive games</p>
+                </div>
+                
+                <div class="games-grid">
+                    <!-- Waste Sorting Game -->
+                    <div class="game-card featured">
+                        <div class="game-badge">Most Popular</div>
+                        <div class="game-preview">
+                            <div class="game-icon">🗑️</div>
+                            <div class="game-animation">
+                                <div class="sorting-demo">
+                                    <div class="demo-item">🍌</div>
+                                    <div class="demo-item">📄</div>
+                                    <div class="demo-item">🥤</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Waste Sorting Master</h3>
+                            <p>Test your sorting skills! Drag items to correct bins and beat the clock.</p>
+                            <div class="game-stats">
+                                <span class="difficulty easy">Easy</span>
+                                <span class="players">👥 2.5k players</span>
+                                <span class="rating">⭐ 4.8</span>
+                            </div>
+                            <div class="game-rewards">
+                                <span class="reward">🏆 Sorting Expert Badge</span>
+                            </div>
+                        </div>
+                        <button class="play-btn" onclick="startGame('sorting')">Play Now</button>
+                    </div>
+
+                    <!-- Eco Quiz Game -->
+                    <div class="game-card">
+                        <div class="game-preview">
+                            <div class="game-icon">🧠</div>
+                            <div class="game-animation">
+                                <div class="quiz-demo">
+                                    <div class="quiz-question">?</div>
+                                    <div class="quiz-options">
+                                        <div class="option">A</div>
+                                        <div class="option">B</div>
+                                        <div class="option">C</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Eco Knowledge Quiz</h3>
+                            <p>Challenge your environmental knowledge with rapid-fire questions!</p>
+                            <div class="game-stats">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="players">👥 1.8k players</span>
+                                <span class="rating">⭐ 4.6</span>
+                            </div>
+                            <div class="game-rewards">
+                                <span class="reward">🧠 Eco Genius Badge</span>
+                            </div>
+                        </div>
+                        <button class="play-btn" onclick="startGame('quiz')">Play Now</button>
+                    </div>
+
+                    <!-- Recycling Race -->
+                    <div class="game-card">
+                        <div class="game-preview">
+                            <div class="game-icon">🏃‍♂️</div>
+                            <div class="game-animation">
+                                <div class="race-demo">
+                                    <div class="runner">🏃‍♂️</div>
+                                    <div class="track"></div>
+                                    <div class="finish">🏁</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Recycling Race</h3>
+                            <p>Race against time to collect and recycle as many items as possible!</p>
+                            <div class="game-stats">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="players">👥 1.2k players</span>
+                                <span class="rating">⭐ 4.9</span>
+                            </div>
+                            <div class="game-rewards">
+                                <span class="reward">🏃‍♂️ Speed Demon Badge</span>
+                            </div>
+                        </div>
+                        <button class="play-btn" onclick="startGame('race')">Play Now</button>
+                    </div>
+
+                    <!-- Composting Simulator -->
+                    <div class="game-card">
+                        <div class="game-preview">
+                            <div class="game-icon">🌱</div>
+                            <div class="game-animation">
+                                <div class="compost-demo">
+                                    <div class="layer">🍃</div>
+                                    <div class="layer">🍌</div>
+                                    <div class="layer">🌿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Composting Simulator</h3>
+                            <p>Learn composting by building perfect compost layers in your virtual garden.</p>
+                            <div class="game-stats">
+                                <span class="difficulty easy">Easy</span>
+                                <span class="players">👥 980 players</span>
+                                <span class="rating">⭐ 4.7</span>
+                            </div>
+                            <div class="game-rewards">
+                                <span class="reward">🌱 Green Thumb Badge</span>
+                            </div>
+                        </div>
+                        <button class="play-btn" onclick="startGame('composting')">Play Now</button>
+                    </div>
+
+                    <!-- Waste Monster Hunt -->
+                    <div class="game-card">
+                        <div class="game-preview">
+                            <div class="game-icon">👾</div>
+                            <div class="game-animation">
+                                <div class="monster-demo">
+                                    <div class="monster">👾</div>
+                                    <div class="hero">🦸‍♂️</div>
+                                    <div class="waste">🗑️</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Waste Monster Hunt</h3>
+                            <p>Defeat pollution monsters by properly disposing of different waste types!</p>
+                            <div class="game-stats">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="players">👥 1.5k players</span>
+                                <span class="rating">⭐ 4.5</span>
+                            </div>
+                            <div class="game-rewards">
+                                <span class="reward">👾 Monster Slayer Badge</span>
+                            </div>
+                        </div>
+                        <button class="play-btn" onclick="startGame('monster')">Play Now</button>
+                    </div>
+
+                    <!-- Clean City Builder -->
+                    <div class="game-card">
+                        <div class="game-preview">
+                            <div class="game-icon">🏗️</div>
+                            <div class="game-animation">
+                                <div class="city-demo">
+                                    <div class="building">🏢</div>
+                                    <div class="tree">🌳</div>
+                                    <div class="recycling">♻️</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Clean City Builder</h3>
+                            <p>Build the perfect eco-friendly city with sustainable waste management systems!</p>
+                            <div class="game-stats">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="players">👥 750 players</span>
+                                <span class="rating">⭐ 4.8</span>
+                            </div>
+                            <div class="game-rewards">
+                                <span class="reward">🏗️ City Planner Badge</span>
+                            </div>
+                        </div>
+                        <button class="play-btn" onclick="startGame('city')">Play Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Badges Collection -->
+            <section class="badges-collection">
+                <div class="section-header">
+                    <h2 class="section-title">🏆 Badge Collection</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Collect these awesome badges by playing games and completing challenges</p>
+                </div>
+                
+                <div class="badges-filter">
+                    <button class="filter-btn active" data-filter="all">All Badges</button>
+                    <button class="filter-btn" data-filter="earned">Earned</button>
+                    <button class="filter-btn" data-filter="locked">Locked</button>
+                    <button class="filter-btn" data-filter="rare">Rare</button>
+                </div>
+                
+                <div class="badges-grid">
+                    <!-- Earned Badges -->
+                    <div class="badge-card earned" data-category="earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🏅</div>
+                        <h3>Welcome Champion</h3>
+                        <p>Started your waste management journey</p>
+                        <div class="badge-date">Earned: Today</div>
+                        <div class="badge-rarity common">Common</div>
+                    </div>
+
+                    <!-- Locked Badges -->
+                    <div class="badge-card locked" data-category="locked">
+                        <div class="badge-icon">🗑️</div>
+                        <h3>Sorting Expert</h3>
+                        <p>Sort 100 items correctly</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 23%"></div>
+                            </div>
+                            <span class="progress-text">23/100</span>
+                        </div>
+                        <div class="badge-rarity common">Common</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked">
+                        <div class="badge-icon">🧠</div>
+                        <h3>Eco Genius</h3>
+                        <p>Score 90%+ on 5 quizzes</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="progress-text">2/5</span>
+                        </div>
+                        <div class="badge-rarity common">Common</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked">
+                        <div class="badge-icon">⚡</div>
+                        <h3>Speed Demon</h3>
+                        <p>Complete games in record time</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">6/10</span>
+                        </div>
+                        <div class="badge-rarity uncommon">Uncommon</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked rare">
+                        <div class="badge-icon">🌍</div>
+                        <h3>Planet Savior</h3>
+                        <p>Complete all games with perfect scores</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0/6</span>
+                        </div>
+                        <div class="badge-rarity rare">Rare</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked rare">
+                        <div class="badge-icon">👑</div>
+                        <h3>Waste Master</h3>
+                        <p>Reach #1 on global leaderboard</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 10%"></div>
+                            </div>
+                            <span class="progress-text">Rank #47</span>
+                        </div>
+                        <div class="badge-rarity legendary">Legendary</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked">
+                        <div class="badge-icon">🔥</div>
+                        <h3>Streak Master</h3>
+                        <p>Play daily for 30 consecutive days</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 13%"></div>
+                            </div>
+                            <span class="progress-text">4/30</span>
+                        </div>
+                        <div class="badge-rarity uncommon">Uncommon</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked">
+                        <div class="badge-icon">👥</div>
+                        <h3>Community Leader</h3>
+                        <p>Help 50 friends learn waste management</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 6%"></div>
+                            </div>
+                            <span class="progress-text">3/50</span>
+                        </div>
+                        <div class="badge-rarity uncommon">Uncommon</div>
+                    </div>
+
+                    <div class="badge-card locked" data-category="locked rare">
+                        <div class="badge-icon">💎</div>
+                        <h3>Diamond Collector</h3>
+                        <p>Earn 10,000 total points</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <span class="progress-text">1,500/10,000</span>
+                        </div>
+                        <div class="badge-rarity epic">Epic</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard -->
+            <section class="leaderboard">
+                <div class="section-header">
+                    <h2 class="section-title">🏆 Leaderboard</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">See how you stack up against other eco-warriors</p>
+                </div>
+                
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-tab="weekly">This Week</button>
+                    <button class="tab-btn" data-tab="monthly">This Month</button>
+                    <button class="tab-btn" data-tab="alltime">All Time</button>
+                </div>
+                
+                <div class="leaderboard-content" id="weeklyBoard">
+                    <div class="top-three">
+                        <div class="podium-spot second">
+                            <div class="player-avatar">👩‍💼</div>
+                            <div class="player-info">
+                                <h4>Priya Sharma</h4>
+                                <span class="player-score">2,340 pts</span>
+                            </div>
+                            <div class="position-badge silver">2</div>
+                        </div>
+                        
+                        <div class="podium-spot first">
+                            <div class="crown">👑</div>
+                            <div class="player-avatar">👨‍💻</div>
+                            <div class="player-info">
+                                <h4>Raj Kumar</h4>
+                                <span class="player-score">2,850 pts</span>
+                            </div>
+                            <div class="position-badge gold">1</div>
+                        </div>
+                        
+                        <div class="podium-spot third">
+                            <div class="player-avatar">👩‍🎓</div>
+                            <div class="player-info">
+                                <h4>Anita Patel</h4>
+                                <span class="player-score">2,120 pts</span>
+                            </div>
+                            <div class="position-badge bronze">3</div>
+                        </div>
+                    </div>
+                    
+                    <div class="leaderboard-list">
+                        <div class="leaderboard-item">
+                            <span class="rank">4</span>
+                            <div class="player-info">
+                                <span class="player-name">Amit Singh</span>
+                                <span class="player-score">1,890 pts</span>
+                            </div>
+                            <span class="player-badges">🏅×3</span>
+                        </div>
+                        
+                        <div class="leaderboard-item">
+                            <span class="rank">5</span>
+                            <div class="player-info">
+                                <span class="player-name">Neha Gupta</span>
+                                <span class="player-score">1,750 pts</span>
+                            </div>
+                            <span class="player-badges">🏅×2</span>
+                        </div>
+                        
+                        <div class="leaderboard-item your-position">
+                            <span class="rank">47</span>
+                            <div class="player-info">
+                                <span class="player-name">You</span>
+                                <span class="player-score">420 pts</span>
+                            </div>
+                            <span class="player-badges">🏅×1</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Features -->
+            <section class="social-features">
+                <div class="section-header">
+                    <h2 class="section-title">🤝 Social Hub</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="social-grid">
+                    <div class="social-card">
+                        <div class="social-icon">👥</div>
+                        <h3>Challenge Friends</h3>
+                        <p>Invite friends to beat your high scores</p>
+                        <button class="social-btn">Invite Friends</button>
+                    </div>
+                    
+                    <div class="social-card">
+                        <div class="social-icon">📱</div>
+                        <h3>Share Achievement</h3>
+                        <p>Show off your badges on social media</p>
+                        <button class="social-btn">Share Now</button>
+                    </div>
+                    
+                    <div class="social-card">
+                        <div class="social-icon">🎯</div>
+                        <h3>Join Tournament</h3>
+                        <p>Compete in weekly tournaments</p>
+                        <button class="social-btn">Join Now</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Game Modal -->
+    <div class="game-modal" id="gameModal">
+        <div class="game-container">
+            <div class="game-header">
+                <h2 id="gameTitle">Game Title</h2>
+                <div class="game-controls">
+                    <span class="game-score">Score: <span id="gameScore">0</span></span>
+                    <button class="close-game" onclick="closeGame()">&times;</button>
+                </div>
+            </div>
+            <div class="game-area" id="gameArea">
+                <!-- Game content will be loaded here -->
+            </div>
+            <div class="game-footer">
+                <button class="game-btn" id="gameActionBtn">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZeroWasteX Games</h3>
+                    <p>Making waste management fun and engaging for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Game Support</h4>
+                    <ul>
+                        <li><a href="#rules">Game Rules</a></li>
+                        <li><a href="#tournaments">Tournaments</a></li>
+                        <li><a href="#badges">Badge Guide</a></li>
+                        <li><a href="#leaderboard">Leaderboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <p>Email: games@zerowastex.com</p>
+                    <p>Discord: ZeroWasteX Games</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZeroWasteX Games. All rights reserved. | Smart India Hackathon Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="games-badges.js"></script>
+</body>
+</html>
+<style>
+    /* Games & Badges Page Styles */
+
+/* Hero Section */
+.games-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    color: white;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 20%; right: 20%; animation-delay: 2s; }
+.particle:nth-child(3) { top: 60%; left: 10%; animation-delay: 4s; }
+.particle:nth-child(4) { bottom: 30%; right: 15%; animation-delay: 6s; }
+.particle:nth-child(5) { bottom: 10%; left: 25%; animation-delay: 1s; }
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.15; }
+    50% { transform: translateY(-40px) rotate(180deg); opacity: 0.3; }
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #fff, #ffd700, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* Player Stats */
+.player-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 180px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 2px;
+}
+
+/* Main Content */
+.games-content {
+    padding: 80px 0;
+    background: #f5f7fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Daily Challenge */
+.daily-challenge {
+    margin-bottom: 100px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    padding: 40px;
+    border-radius: 25px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.daily-challenge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.challenge-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-timer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.challenge-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.challenge-info h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.challenge-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.challenge-rewards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.reward-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.challenge-btn {
+    padding: 20px 40px;
+    background: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Featured Games */
+.featured-games {
+    margin-bottom: 100px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 3px solid transparent;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.game-card.featured {
+    border-color: #ffd700;
+    background: linear-gradient(135deg, #fff9e6, white);
+}
+
+.game-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #ffd700;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.game-preview {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-icon {
+    font-size: 4rem;
+    z-index: 2;
+    position: relative;
+}
+
+.game-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Game Animations */
+.sorting-demo {
+    display: flex;
+    gap: 20px;
+    animation: sortingMove 3s ease-in-out infinite;
+}
+
+.demo-item {
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+@keyframes sortingMove {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+
+.quiz-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.quiz-question {
+    font-size: 3rem;
+    animation: pulse 2s infinite;
+}
+
+.quiz-options {
+    display: flex;
+    gap: 10px;
+}
+
+.option {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: optionGlow 2s infinite;
+}
+
+.option:nth-child(2) { animation-delay: 0.5s; }
+.option:nth-child(3) { animation-delay: 1s; }
+
+@keyframes optionGlow {
+    0%, 100% { background: rgba(255, 255, 255, 0.3); }
+    50% { background: rgba(255, 255, 255, 0.6); }
+}
+
+.race-demo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+}
+
+.runner {
+    font-size: 2rem;
+    animation: running 3s ease-in-out infinite;
+}
+
+.track {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 20px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.track::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: #ffd700;
+    border-radius: 2px;
+    animation: trackProgress 3s ease-in-out infinite;
+}
+
+@keyframes running {
+    0%, 100% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(10px) scale(1.1); }
+}
+
+@keyframes trackProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Game Info */
+.game-info {
+    padding: 30px 25px;
+}
+
+.game-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.game-info p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.game-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.difficulty {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.difficulty.easy { background: #d4edda; color: #155724; }
+.difficulty.medium { background: #fff3cd; color: #856404; }
+.difficulty.hard { background: #f8d7da; color: #721c24; }
+
+.players, .rating {
+    color: #666;
+}
+
+.game-rewards {
+    margin-bottom: 20px;
+}
+
+.reward {
+    background: #e6f3ff;
+    color: #667eea;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.play-btn {
+    width: 100%;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.play-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Badges Collection */
+.badges-collection {
+    margin-bottom: 100px;
+}
+
+.badges-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: white;
+    color: #666;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.badge-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.badge-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge-card.earned {
+    border-color: #ffd700;
+    background: linear-gradient(135deg, #fff9e6, white);
+    animation: badgeGlow 3s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+    0%, 100% { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3); }
+}
+
+.badge-glow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+    border-radius: 25px;
+    z-index: -1;
+    animation: glowRotate 3s linear infinite;
+}
+
+@keyframes glowRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.badge-card.locked {
+    opacity: 0.6;
+    filter: grayscale(0.7);
+}
+
+.badge-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.badge-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.badge-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.badge-progress {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.badge-date {
+    font-size: 0.8rem;
+    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.badge-rarity {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge-rarity.common { background: #e2e8f0; color: #4a5568; }
+.badge-rarity.uncommon { background: #c6f6d5; color: #22543d; }
+.badge-rarity.rare { background: #bee3f8; color: #2c5282; }
+.badge-rarity.epic { background: #e9d8fd; color: #553c9a; }
+.badge-rarity.legendary { background: #fed7d7; color: #822727; }
+
+/* Leaderboard */
+.leaderboard {
+    margin-bottom: 100px;
+}
+
+.leaderboard-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 40px;
+    background: #e2e8f0;
+    border-radius: 15px;
+    padding: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-btn {
+    padding: 15px 30px;
+    background: transparent;
+    color: #666;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.leaderboard-content {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.top-three {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.podium-spot {
+    text-align: center;
+    position: relative;
+    padding: 30px 25px;
+    border-radius: 20px;
+    min-width: 180px;
+}
+
+.podium-spot.first {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    transform: translateY(-20px);
+    order: 2;
+}
+
+.podium-spot.second {
+    background: linear-gradient(135deg, #c0c0c0, #e8e8e8);
+    transform: translateY(-10px);
+    order: 1;
+}
+
+.podium-spot.third {
+    background: linear-gradient(135deg, #cd7f32, #daa520);
+    order: 3;
+}
+
+.crown {
+    font-size: 2rem;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: crownFloat 3s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.player-avatar {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.player-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2d3748;
+}
+
+.player-score {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.position-badge {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.position-badge.gold { background: #ffd700; color: #333; }
+.position-badge.silver { background: #c0c0c0; color: #333; }
+.position-badge.bronze { background: #cd7f32; color: white; }
+
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.leaderboard-item.your-position {
+    background: linear-gradient(135deg, #e6f3ff, #f8f9fa);
+    border: 2px solid #667eea;
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    min-width: 30px;
+}
+
+.player-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-name {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.player-badges {
+    font-size: 1.2rem;
+}
+
+/* Social Features */
+.social-features {
+    margin-bottom: 50px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.social-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 4px solid #667eea;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.social-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.social-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Game Modal */
+.game-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.game-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 25px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.game-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.game-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-score {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.close-game {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.close-game:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.game-area {
+    padding: 40px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.game-footer {
+    padding: 30px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.game-btn {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .player-stats {
+        gap: 15px;
+    }
+    
+    .stat-card {
+        min-width: 150px;
+        padding: 20px 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .challenge-card {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .games-grid,
+    .badges-grid,
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .top-three {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .podium-spot {
+        transform: none !important;
+        order: initial !important;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .game-container {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .game-area {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .daily-challenge {
+        padding: 25px 20px;
+    }
+    
+    .challenge-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .game-card,
+    .badge-card,
+    .social-card {
+        padding: 20px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .badges-filter {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+</style>

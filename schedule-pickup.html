@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Waste Pickup | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pickup-hero {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+            padding: 120px 0 60px;
+            margin-top: 70px;
+            text-align: center;
+        }
+        
+        .pickup-content {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #4ecdc4;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .waste-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .waste-type-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .waste-type-card:hover {
+            border-color: #4ecdc4;
+            background: #f0fdfc;
+        }
+        
+        .waste-type-card input[type="checkbox"] {
+            width: auto;
+        }
+        
+        .waste-type-card input[type="checkbox"]:checked + span {
+            color: #4ecdc4;
+            font-weight: 600;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 18px 25px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
+        }
+        
+        .pricing-info {
+            background: #e6f3ff;
+            border: 1px solid #b3d9ff;
+            color: #0066cc;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 0 20px;
+                padding: 30px 20px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .waste-types {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="business-model.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pickup-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Schedule Pickup</span>
+            </div>
+            <h1 class="hero-title">📅 Schedule Waste Pickup</h1>
+            <p class="hero-subtitle">Book a convenient time for waste collection from your doorstep</p>
+        </div>
+    </section>
+
+    <main class="pickup-content">
+        <div class="container">
+            <div class="form-container">
+                <div class="pricing-info">
+                    💰 Regular pickup: FREE | Express pickup: ₹50 | Bulk collection: ₹100-300
+                </div>
+                
+                <form onsubmit="schedulePickup(event)">
+                    <div class="form-group">
+                        <label>📍 Pickup Address *</label>
+                        <input type="text" placeholder="Enter complete address with landmarks" required>
+                        <small style="color: #666;">Include house/flat number, street, area, and nearby landmarks</small>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>📅 Preferred Date *</label>
+                            <input type="date" required id="pickupDate">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>⏰ Time Slot *</label>
+                            <select required>
+                                <option value="">Select time slot</option>
+                                <option value="morning">🌅 Morning (8:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">☀️ Afternoon (12:00 PM - 4:00 PM)</option>
+                                <option value="evening">🌆 Evening (4:00 PM - 8:00 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>🗑️ Types of Waste to Collect *</label>
+                        <div class="waste-types">
+                            <label class="waste-type-card">
+                                <input type="checkbox" value="organic">
+                                <span>🥬 Organic/Food Waste</span>
+                            </label>
+                            <label class="waste-type-card">
+                                <input type="checkbox" value="plastic">
+                                <span>🥤 Plastic Items</span>
+                            </label>
+                            <label class="waste-type-card">
+                                <input type="checkbox" value="paper">
+                                <span>📄 Paper/Cardboard</span>
+                            </label>
+                            <label class="waste-type-card">
+                                <input type="checkbox" value="glass">
+                                <span>🍶 Glass Items</span>
+                            </label>
+                            <label class="waste-type-card">
+                                <input type="checkbox" value="metal">
+                                <span>🥫 Metal Items</span>
+                            </label>
+                            <label class="waste-type-card">
+                                <input type="checkbox" value="ewaste">
+                                <span>📱 E-waste/Electronics</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>📏 Estimated Quantity</label>
+                            <select>
+                                <option value="small">🛍️ Small (1-2 bags)</option>
+                                <option value="medium" selected>📦 Medium (3-5 bags)</option>
+                                <option value="large">🗃️ Large (6-10 bags)</option>
+                                <option value="bulk">🚛 Bulk (10+ bags, furniture, etc.)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>🚀 Pickup Type</label>
+                            <select>
+                                <option value="regular">🆓 Regular (Next available slot)</option>
+                                <option value="express">⚡ Express (+₹50 - Within 4 hours)</option>
+                                <option value="scheduled">📅 Scheduled (Specific time)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>📝 Special Instructions</label>
+                        <textarea placeholder="Any special instructions? Location details? Items that need careful handling? Access instructions?" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>👤 Contact Name *</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>📱 Phone Number *</label>
+                            <input type="tel" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        📅 Schedule Pickup Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('pickupDate').min = tomorrow.toISOString().split('T')[0];
+        });
+        
+        function schedulePickup(event) {
+            event.preventDefault();
+            const pickupId = "PU" + Math.random().toString(36).substr(2, 8).toUpperCase();
+            alert("✅ Pickup scheduled successfully!\n\nBooking ID: " + pickupId + "\n\nYou'll receive a confirmation SMS with pickup details. Our team will arrive during your selected time slot.");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

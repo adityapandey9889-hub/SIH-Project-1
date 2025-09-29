@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards & Programs - Earn While You Learn | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rewards-program.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="business-model.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="rewards-hero">
+        <div class="hero-background">
+            <div class="reward-particles">
+                <div class="particle">🏆</div>
+                <div class="particle">⭐</div>
+                <div class="particle">🎁</div>
+                <div class="particle">💰</div>
+                <div class="particle">🏅</div>
+                <div class="particle">💎</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Rewards & Programs</span>
+            </div>
+            <h1 class="hero-title">Earn Rewards for Green Actions!</h1>
+            <p class="hero-subtitle">Turn your eco-friendly habits into valuable rewards and exclusive benefits</p>
+            
+            <!-- User Rewards Dashboard -->
+            <div class="user-dashboard">
+                <div class="dashboard-card points-card">
+                    <div class="card-header">
+                        <div class="card-icon">⭐</div>
+                        <div class="card-info">
+                            <h3>Total Points</h3>
+                            <div class="points-balance" id="totalPoints">2,450</div>
+                        </div>
+                    </div>
+                    <div class="points-trend">
+                        <span class="trend-indicator up">↗️ +120 this week</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-card level-card">
+                    <div class="card-header">
+                        <div class="card-icon">🏆</div>
+                        <div class="card-info">
+                            <h3>Current Level</h3>
+                            <div class="level-name">Eco Warrior</div>
+                        </div>
+                    </div>
+                    <div class="level-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%"></div>
+                        </div>
+                        <span class="progress-text">680/1000 XP to next level</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-card streak-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔥</div>
+                        <div class="card-info">
+                            <h3>Daily Streak</h3>
+                            <div class="streak-count">7 days</div>
+                        </div>
+                    </div>
+                    <div class="streak-bonus">
+                        <span class="bonus-text">2x points active!</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-card impact-card">
+                    <div class="card-header">
+                        <div class="card-icon">🌱</div>
+                        <div class="card-info">
+                            <h3>Impact Score</h3>
+                            <div class="impact-value">156 kg</div>
+                        </div>
+                    </div>
+                    <div class="impact-detail">
+                        <span class="impact-text">Waste recycled</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="rewards-content">
+        <div class="container">
+            
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <div class="section-header">
+                    <h2 class="section-title">⚡ Quick Earn</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Complete these actions to earn points instantly</p>
+                </div>
+                
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <div class="action-icon">📸</div>
+                        <h3>Photo Challenge</h3>
+                        <p>Share a photo of your recycling setup</p>
+                        <div class="action-reward">+50 points</div>
+                        <button class="action-btn" onclick="completeAction('photo')">Complete</button>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-icon">🎯</div>
+                        <h3>Daily Quiz</h3>
+                        <p>Answer 5 questions about waste management</p>
+                        <div class="action-reward">+25 points</div>
+                        <button class="action-btn" onclick="completeAction('quiz')">Start Quiz</button>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-icon">👥</div>
+                        <h3>Invite Friend</h3>
+                        <p>Invite a friend to join ZeroWasteX</p>
+                        <div class="action-reward">+100 points</div>
+                        <button class="action-btn" onclick="completeAction('invite')">Invite</button>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-icon">📝</div>
+                        <h3>Write Review</h3>
+                        <p>Review your recycling center experience</p>
+                        <div class="action-reward">+75 points</div>
+                        <button class="action-btn" onclick="completeAction('review')">Write</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Redemption Catalog -->
+            <section class="redemption-catalog">
+                <div class="section-header">
+                    <h2 class="section-title">🎁 Rewards Catalog</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Redeem your points for amazing rewards and benefits</p>
+                </div>
+                
+                <div class="catalog-filters">
+                    <button class="filter-btn active" data-filter="all">All Rewards</button>
+                    <button class="filter-btn" data-filter="vouchers">Vouchers</button>
+                    <button class="filter-btn" data-filter="products">Products</button>
+                    <button class="filter-btn" data-filter="experiences">Experiences</button>
+                    <button class="filter-btn" data-filter="donations">Donations</button>
+                </div>
+
+                <div class="rewards-grid">
+                    <!-- Voucher Rewards -->
+                    <div class="reward-card featured" data-category="vouchers">
+                        <div class="reward-badge">Popular</div>
+                        <div class="reward-image">
+                            <div class="reward-icon">🛒</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>₹500 Shopping Voucher</h3>
+                            <p>Use at any major retail store or online platform</p>
+                            <div class="reward-details">
+                                <span class="points-required">1000 points</span>
+                                <span class="availability">50 left</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('voucher-500')">Redeem Now</button>
+                    </div>
+
+                    <div class="reward-card" data-category="vouchers">
+                        <div class="reward-image">
+                            <div class="reward-icon">☕</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Coffee Shop Voucher</h3>
+                            <p>Free coffee at participating eco-friendly cafes</p>
+                            <div class="reward-details">
+                                <span class="points-required">200 points</span>
+                                <span class="availability">Unlimited</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('coffee')">Redeem Now</button>
+                    </div>
+
+                    <!-- Product Rewards -->
+                    <div class="reward-card" data-category="products">
+                        <div class="reward-image">
+                            <div class="reward-icon">🌱</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Eco-Friendly Kit</h3>
+                            <p>Reusable bags, water bottle, and bamboo utensils</p>
+                            <div class="reward-details">
+                                <span class="points-required">800 points</span>
+                                <span class="availability">25 left</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('eco-kit')">Redeem Now</button>
+                    </div>
+
+                    <div class="reward-card" data-category="products">
+                        <div class="reward-image">
+                            <div class="reward-icon">📚</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Sustainability Book</h3>
+                            <p>"Zero Waste Home" by Bea Johnson</p>
+                            <div class="reward-details">
+                                <span class="points-required">600 points</span>
+                                <span class="availability">15 left</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('book')">Redeem Now</button>
+                    </div>
+
+                    <!-- Experience Rewards -->
+                    <div class="reward-card premium" data-category="experiences">
+                        <div class="reward-badge">Premium</div>
+                        <div class="reward-image">
+                            <div class="reward-icon">🌳</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Tree Planting Experience</h3>
+                            <p>Join our weekend tree planting drive</p>
+                            <div class="reward-details">
+                                <span class="points-required">1500 points</span>
+                                <span class="availability">5 spots left</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('tree-planting')">Redeem Now</button>
+                    </div>
+
+                    <div class="reward-card" data-category="experiences">
+                        <div class="reward-image">
+                            <div class="reward-icon">🏭</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Recycling Facility Tour</h3>
+                            <p>Behind-the-scenes tour of recycling process</p>
+                            <div class="reward-details">
+                                <span class="points-required">300 points</span>
+                                <span class="availability">Next: Oct 15</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('facility-tour')">Redeem Now</button>
+                    </div>
+
+                    <!-- Donation Rewards -->
+                    <div class="reward-card" data-category="donations">
+                        <div class="reward-image">
+                            <div class="reward-icon">💚</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Environmental Charity</h3>
+                            <p>Donate to ocean cleanup initiatives</p>
+                            <div class="reward-details">
+                                <span class="points-required">500 points</span>
+                                <span class="availability">= ₹250 donation</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('ocean-cleanup')">Donate</button>
+                    </div>
+
+                    <div class="reward-card" data-category="donations">
+                        <div class="reward-image">
+                            <div class="reward-icon">🎓</div>
+                        </div>
+                        <div class="reward-info">
+                            <h3>Education Support</h3>
+                            <p>Fund environmental education in schools</p>
+                            <div class="reward-details">
+                                <span class="points-required">750 points</span>
+                                <span class="availability">= ₹375 funding</span>
+                            </div>
+                        </div>
+                        <button class="redeem-btn" onclick="redeemReward('education')">Donate</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Program Tiers -->
+            <section class="program-tiers">
+                <div class="section-header">
+                    <h2 class="section-title">🎖️ Membership Tiers</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Unlock exclusive benefits as you level up in our program</p>
+                </div>
+                
+                <div class="tiers-container">
+                    <div class="tier-card bronze">
+                        <div class="tier-header">
+                            <div class="tier-icon">🥉</div>
+                            <h3>Green Starter</h3>
+                            <div class="tier-requirement">0 - 999 points</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">⭐</span>
+                                <span>Earn 1x points</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎁</span>
+                                <span>Basic rewards access</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">📧</span>
+                                <span>Monthly newsletter</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🌱</span>
+                                <span>Impact tracking</span>
+                            </div>
+                        </div>
+                        <div class="tier-status">
+                            <span class="status-text">Current Tier</span>
+                        </div>
+                    </div>
+
+                    <div class="tier-card silver current">
+                        <div class="tier-header">
+                            <div class="tier-icon">🥈</div>
+                            <h3>Eco Warrior</h3>
+                            <div class="tier-requirement">1000 - 4999 points</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">⭐</span>
+                                <span>Earn 1.25x points</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎁</span>
+                                <span>Premium rewards access</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎯</span>
+                                <span>Exclusive challenges</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">📞</span>
+                                <span>Priority support</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🏅</span>
+                                <span>Special badges</span>
+                            </div>
+                        </div>
+                        <div class="tier-status current">
+                            <span class="status-text">Your Level</span>
+                            <div class="tier-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 49%"></div>
+                                </div>
+                                <span class="progress-text">2,450/5,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tier-card gold">
+                        <div class="tier-header">
+                            <div class="tier-icon">🥇</div>
+                            <h3>Planet Guardian</h3>
+                            <div class="tier-requirement">5000 - 9999 points</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">⭐</span>
+                                <span>Earn 1.5x points</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">💎</span>
+                                <span>Exclusive premium rewards</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">👥</span>
+                                <span>VIP community access</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎪</span>
+                                <span>Early access to events</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎁</span>
+                                <span>Monthly surprise gifts</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🌟</span>
+                                <span>Personal eco consultant</span>
+                            </div>
+                        </div>
+                        <div class="tier-status">
+                            <span class="status-text">2,550 points to unlock</span>
+                        </div>
+                    </div>
+
+                    <div class="tier-card diamond">
+                        <div class="tier-header">
+                            <div class="tier-icon">💎</div>
+                            <h3>Earth Champion</h3>
+                            <div class="tier-requirement">10,000+ points</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">⭐</span>
+                                <span>Earn 2x points</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">👑</span>
+                                <span>All rewards unlocked</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎯</span>
+                                <span>Custom challenges</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎤</span>
+                                <span>Ambassador opportunities</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✈️</span>
+                                <span>Exclusive eco-trips</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🏆</span>
+                                <span>Annual recognition</span>
+                            </div>
+                        </div>
+                        <div class="tier-status">
+                            <span class="status-text">7,550 points to unlock</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <div class="section-header">
+                    <h2 class="section-title">📊 Recent Activity</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="activity-timeline">
+                    <div class="activity-item">
+                        <div class="activity-icon earned">⭐</div>
+                        <div class="activity-details">
+                            <h4>Points Earned</h4>
+                            <p>Completed daily recycling challenge</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                        <div class="activity-value">+50 points</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon redeemed">🎁</div>
+                        <div class="activity-details">
+                            <h4>Reward Redeemed</h4>
+                            <p>Coffee shop voucher claimed</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                        <div class="activity-value">-200 points</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon earned">🏅</div>
+                        <div class="activity-details">
+                            <h4>Badge Unlocked</h4>
+                            <p>7-day streak achievement</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                        <div class="activity-value">+100 points</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon earned">⭐</div>
+                        <div class="activity-details">
+                            <h4>Training Completed</h4>
+                            <p>Plastic recycling module finished</p>
+                            <span class="activity-time">3 days ago</span>
+                        </div>
+                        <div class="activity-value">+150 points</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon level">🏆</div>
+                        <div class="activity-details">
+                            <h4>Level Up!</h4>
+                            <p>Promoted to Eco Warrior</p>
+                            <span class="activity-time">5 days ago</span>
+                        </div>
+                        <div class="activity-value">Bonus unlocked</div>
+                    </div>
+                </div>
+                
+                <div class="activity-footer">
+                    <button class="view-all-btn">View All Activity</button>
+                </div>
+            </section>
+
+            <!-- Referral Program -->
+            <section class="referral-program">
+                <div class="referral-container">
+                    <div class="referral-content">
+                        <h2>👥 Invite Friends & Earn Big!</h2>
+                        <p>Get 100 points for every friend you invite, plus 25% of their earnings for life!</p>
+                        
+                        <div class="referral-stats">
+                            <div class="referral-stat">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Friends Invited</div>
+                            </div>
+                            <div class="referral-stat">
+                                <div class="stat-number">450</div>
+                                <div class="stat-label">Bonus Points</div>
+                            </div>
+                            <div class="referral-stat">
+                                <div class="stat-number">₹225</div>
+                                <div class="stat-label">Lifetime Value</div>
+                            </div>
+                        </div>
+                        
+                        <div class="referral-actions">
+                            <div class="referral-link">
+                                <input type="text" value="https://zerowastex.com/ref/USER123" readonly class="link-input">
+                                <button class="copy-btn" onclick="copyReferralLink()">Copy Link</button>
+                            </div>
+                            <div class="social-share">
+                                <button class="share-btn whatsapp">📱 WhatsApp</button>
+                                <button class="share-btn telegram">💬 Telegram</button>
+                                <button class="share-btn email">📧 Email</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="referral-visual">
+                        <div class="referral-graphic">
+                            <div class="user-circle main">👤</div>
+                            <div class="user-circle friend friend1">👥</div>
+                            <div class="user-circle friend friend2">👥</div>
+                            <div class="user-circle friend friend3">👥</div>
+                            <div class="connection-lines">
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Special Offers -->
+            <section class="special-offers">
+                <div class="section-header">
+                    <h2 class="section-title">🔥 Limited Time Offers</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Don't miss these exclusive deals!</p>
+                </div>
+                
+                <div class="offers-grid">
+                    <div class="offer-card urgent">
+                        <div class="offer-timer">
+                            <span class="timer-icon">⏰</span>
+                            <span class="timer-text">Ends in 2 days</span>
+                        </div>
+                        <h3>Double Points Weekend</h3>
+                        <p>Earn 2x points on all activities this weekend!</p>
+                        <div class="offer-action">
+                            <button class="offer-btn">Activate Now</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge">New</div>
+                        <h3>Bundle Deal: Eco Starter Pack</h3>
+                        <p>Get reusable bags + water bottle + 500 bonus points</p>
+                        <div class="offer-pricing">
+                            <span class="old-price">1200 points</span>
+                            <span class="new-price">800 points</span>
+                        </div>
+                        <div class="offer-action">
+                            <button class="offer-btn">Claim Deal</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <h3>Streak Bonus Challenge</h3>
+                        <p>Maintain 30-day streak and get exclusive rewards</p>
+                        <div class="offer-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 23%"></div>
+                            </div>
+                            <span class="progress-text">7/30 days completed</span>
+                        </div>
+                        <div class="offer-action">
+                            <button class="offer-btn secondary">Continue Streak</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZeroWasteX Rewards</h3>
+                    <p>Earn rewards while making a positive environmental impact.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Program Benefits</h4>
+                    <ul>
+                        <li><a href="#earn">How to Earn</a></li>
+                        <li><a href="#redeem">Redeem Rewards</a></li>
+                        <li><a href="#tiers">Membership Tiers</a></li>
+                        <li><a href="#referral">Referral Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: rewards@zerowastex.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZeroWasteX Rewards Program. All rights reserved. | Smart India Hackathon Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="rewards-program.js"></script>
+    
+</body>
+</html>
+<style>
+    /* Rewards Program Page Styles */
+
+/* Hero Section */
+.rewards-hero {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffd700 100%);
+    color: white;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reward-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    animation: rewardFloat 12s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+.particle:nth-child(3) { top: 60%; left: 15%; animation-delay: 4s; }
+.particle:nth-child(4) { bottom: 30%; right: 20%; animation-delay: 6s; }
+.particle:nth-child(5) { bottom: 20%; left: 25%; animation-delay: 8s; }
+.particle:nth-child(6) { top: 40%; right: 30%; animation-delay: 10s; }
+
+@keyframes rewardFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.15; }
+    25% { transform: translateY(-20px) rotate(90deg) scale(1.1); opacity: 0.25; }
+    50% { transform: translateY(-40px) rotate(180deg) scale(1.2); opacity: 0.3; }
+    75% { transform: translateY(-20px) rotate(270deg) scale(1.1); opacity: 0.25; }
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #fff, #ffd700, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* User Dashboard */
+.user-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin: 0 0 5px 0;
+}
+
+.points-balance {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffd700;
+    line-height: 1;
+}
+
+.level-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffd700;
+    line-height: 1;
+}
+
+.streak-count {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff6b35;
+    line-height: 1;
+}
+
+.impact-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #90ee90;
+    line-height: 1;
+}
+
+.points-trend {
+    text-align: center;
+}
+
+.trend-indicator {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.trend-indicator.up {
+    color: #90ee90;
+}
+
+.level-progress {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.streak-bonus {
+    text-align: center;
+}
+
+.bonus-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ff6b35;
+    background: rgba(255, 107, 53, 0.2);
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.impact-detail {
+    text-align: center;
+}
+
+.impact-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.rewards-content {
+    padding: 80px 0;
+    background: #fafafa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #ffd700);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Quick Actions */
+.quick-actions {
+    margin-bottom: 100px;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.action-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid #ff6b35;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.action-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.action-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.action-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.action-reward {
+    background: #fff3cd;
+    color: #856404;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Redemption Catalog */
+.redemption-catalog {
+    margin-bottom: 100px;
+}
+
+.catalog-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: white;
+    color: #666;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #ff6b35;
+    color: white;
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.reward-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.reward-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.reward-card.featured {
+    border-color: #ffd700;
+    background: linear-gradient(135deg, #fff9e6, white);
+}
+
+.reward-card.premium {
+    border-color: #ff6b35;
+    background: linear-gradient(135deg, #fff5f0, white);
+}
+
+.reward-badge {
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    background: #ffd700;
+    color: #333;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reward-card.premium .reward-badge {
+    background: #ff6b35;
+    color: white;
+}
+
+.reward-image {
+    height: 150px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.reward-icon {
+    font-size: 4rem;
+    color: white;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.reward-info {
+    padding: 25px;
+}
+
+.reward-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.reward-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.reward-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.points-required {
+    background: #e6f3ff;
+    color: #ff6b35;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.availability {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.redeem-btn {
+    width: 100%;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.redeem-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Program Tiers */
+.program-tiers {
+    margin-bottom: 100px;
+}
+
+.tiers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tier-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.tier-card:hover {
+    transform: translateY(-5px);
+}
+
+.tier-card.current {
+    border-color: #ffd700;
+    background: linear-gradient(135deg, #fff9e6, white);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.tier-card.bronze { border-top: 4px solid #cd7f32; }
+.tier-card.silver { border-top: 4px solid #c0c0c0; }
+.tier-card.gold { border-top: 4px solid #ffd700; }
+.tier-card.diamond { border-top: 4px solid #b9f2ff; }
+
+.tier-header {
+    margin-bottom: 25px;
+}
+
+.tier-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.tier-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.tier-requirement {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.tier-benefits {
+    margin-bottom: 25px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.benefit-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.tier-status {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #666;
+}
+
+.tier-status.current {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.tier-progress {
+    margin-top: 10px;
+}
+
+/* Recent Activity */
+.recent-activity {
+    margin-bottom: 100px;
+}
+
+.activity-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item:hover {
+    background: #f8f9fa;
+    margin: 0 -15px;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+.activity-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.activity-icon.earned {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+}
+
+.activity-icon.redeemed {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    color: #856404;
+}
+
+.activity-icon.level {
+    background: linear-gradient(135deg, #cce5ff, #b3d9ff);
+    color: #004085;
+}
+
+.activity-details {
+    flex: 1;
+}
+
+.activity-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.activity-details p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.activity-time {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.activity-value {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ff6b35;
+}
+
+.activity-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.view-all-btn {
+    padding: 12px 30px;
+    background: transparent;
+    color: #ff6b35;
+    border: 2px solid #ff6b35;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background: #ff6b35;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Referral Program */
+.referral-program {
+    margin-bottom: 100px;
+}
+
+.referral-container {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 25px;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.referral-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+}
+
+.referral-content,
+.referral-visual {
+    position: relative;
+    z-index: 2;
+}
+
+.referral-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.referral-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.referral-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.referral-stat {
+    text-align: center;
+}
+
+.referral-stat .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+    line-height: 1;
+}
+
+.referral-stat .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.referral-actions {
+    margin-bottom: 20px;
+}
+
+.referral-link {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.link-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.copy-btn {
+    padding: 12px 20px;
+    background: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #ffed4e;
+    transform: translateY(-2px);
+}
+
+.social-share {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.share-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Referral Visual */
+.referral-graphic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.user-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-circle.main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffd700;
+    color: #333;
+    font-size: 2rem;
+    width: 80px;
+    height: 80px;
+}
+
+.user-circle.friend {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    animation: friendPulse 3s ease-in-out infinite;
+}
+
+.friend1 { top: 10%; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.friend2 { top: 50%; right: 10%; animation-delay: 1s; }
+.friend3 { bottom: 10%; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
+
+@keyframes friendPulse {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.7; }
+    50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+}
+
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    width: 2px;
+    transform-origin: bottom center;
+    animation: lineGlow 3s ease-in-out infinite;
+}
+
+.line1 {
+    top: 40%;
+    left: 50%;
+    height: 40px;
+    transform: translateX(-50%) rotate(-30deg);
+}
+
+.line2 {
+    top: 50%;
+    right: 35%;
+    height: 40px;
+    transform: rotate(30deg);
+    animation-delay: 1s;
+}
+
+.line3 {
+    bottom: 35%;
+    left: 50%;
+    height: 40px;
+    transform: translateX(-50%) rotate(30deg);
+    animation-delay: 2s;
+}
+
+@keyframes lineGlow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+}
+
+/* Special Offers */
+.special-offers {
+    margin-bottom: 50px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card.urgent {
+    border-color: #ff6b35;
+    background: linear-gradient(135deg, #fff5f0, white);
+}
+
+.offer-timer {
+    background: #ff6b35;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.offer-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.offer-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.offer-pricing {
+    margin-bottom: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff6b35;
+}
+
+.offer-progress {
+    margin-bottom: 20px;
+}
+
+.offer-btn {
+    width: 100%;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.offer-btn.secondary {
+    background: transparent;
+    color: #ff6b35;
+    border: 2px solid #ff6b35;
+}
+
+.offer-btn:hover {
+    transform: translateY(-2px);
+}
+
+.offer-btn:not(.secondary):hover {
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.offer-btn.secondary:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .user-dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .dashboard-card {
+        padding: 20px;
+    }
+    
+    .actions-grid,
+    .rewards-grid,
+    .tiers-container,
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .catalog-filters {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .referral-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .referral-stats {
+        justify-content: center;
+    }
+    
+    .referral-link {
+        flex-direction: column;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .dashboard-card {
+        padding: 15px;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .action-card,
+    .reward-card,
+    .tier-card,
+    .offer-card {
+        padding: 25px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .referral-container {
+        padding: 30px 20px;
+    }
+    
+    .referral-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .social-share {
+        justify-content: center;
+    }
+}
+
+</style>

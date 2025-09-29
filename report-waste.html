@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Waste Issue | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .report-hero {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 120px 0 60px;
+            margin-top: 70px;
+            text-align: center;
+        }
+        
+        .report-content {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #ff6b6b;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .location-btn {
+            margin-top: 10px;
+            background: #4ecdc4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .location-btn:hover {
+            background: #26a69a;
+            transform: translateY(-2px);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 18px 25px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+        
+        .breadcrumb {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        .priority-indicator {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 0 20px;
+                padding: 30px 20px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="business-model.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="report-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Report Waste</span>
+            </div>
+            <h1 class="hero-title">🚨 Report Waste Issue</h1>
+            <p class="hero-subtitle">Help keep your community clean by reporting waste problems</p>
+        </div>
+    </section>
+
+    <main class="report-content">
+        <div class="container">
+            <div class="form-container">
+                <div class="priority-indicator">
+                    📞 For emergency waste issues, call: +91 98765-00000
+                </div>
+                
+                <form onsubmit="submitReport(event)">
+                    <div class="form-group">
+                        <label>📍 Location *</label>
+                        <input type="text" placeholder="Enter address, landmark, or area" id="location" required>
+                        <button type="button" class="location-btn" onclick="getMyLocation()">
+                            📍 Use My Current Location
+                        </button>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>🗂️ Issue Type *</label>
+                            <select required>
+                                <option value="">Select issue type</option>
+                                <option value="overflowing">🗑️ Overflowing Bins</option>
+                                <option value="illegal">🚫 Illegal Dumping</option>
+                                <option value="missed">📅 Missed Collection</option>
+                                <option value="broken">🔧 Broken Bin</option>
+                                <option value="hazardous">⚠️ Hazardous Waste</option>
+                                <option value="smell">💨 Bad Odor</option>
+                                <option value="other">❓ Other Issue</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>⚡ Priority Level</label>
+                            <select>
+                                <option value="low">🟢 Low - Can wait</option>
+                                <option value="medium" selected>🟡 Medium - Normal</option>
+                                <option value="high">🟠 High - Urgent</option>
+                                <option value="critical">🔴 Critical - Emergency</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>📝 Detailed Description *</label>
+                        <textarea placeholder="Please describe the waste issue in detail. Include size, type of waste, how long it's been there, any safety concerns, etc." rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>📷 Upload Photos (Recommended)</label>
+                        <input type="file" accept="image/*" multiple>
+                        <small style="color: #666; font-size: 0.9rem;">Photos help our team understand and resolve the issue faster</small>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>👤 Your Name</label>
+                            <input type="text" placeholder="Your name (optional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>📱 Phone Number</label>
+                            <input type="tel" placeholder="+91 98765 43210">
+                            <small style="color: #666; font-size: 0.9rem;">For updates on resolution</small>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        📤 Submit Waste Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function getMyLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById('location').value = "Location detected: " + position.coords.latitude + ", " + position.coords.longitude;
+                    alert("📍 Location detected successfully!");
+                }, function() {
+                    alert("❌ Unable to get your location. Please enter manually.");
+                });
+            } else {
+                alert("❌ Geolocation not supported by this browser.");
+            }
+        }
+        
+        function submitReport(event) {
+            event.preventDefault();
+            const reportId = "WR" + Math.random().toString(36).substr(2, 8).toUpperCase();
+            alert("✅ Waste report submitted successfully!\n\nReport ID: " + reportId + "\n\nWe'll investigate and resolve this issue within 24-48 hours. You'll receive updates via SMS/email.");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

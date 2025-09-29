@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support - We're Here to Help | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-support.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="business-model.html" class="nav-link">Business Model</a>
+                <a href="what-we-do.html" class="nav-link">What We Do</a>
+                <a href="citizen-login.html" class="nav-link">Citizen Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="support-hero">
+        <div class="hero-background">
+            <div class="support-particles">
+                <div class="particle">🤝</div>
+                <div class="particle">💬</div>
+                <div class="particle">📞</div>
+                <div class="particle">📧</div>
+                <div class="particle">❓</div>
+                <div class="particle">💡</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Contact Support</span>
+            </div>
+            <h1 class="hero-title">We're Here to Help You Succeed</h1>
+            <p class="hero-subtitle">Get instant support, find answers, and connect with our expert team</p>
+            
+            <!-- Quick Support Options -->
+            <div class="quick-support">
+                <div class="support-option emergency">
+                    <div class="option-icon">🚨</div>
+                    <div class="option-info">
+                        <h3>Emergency Support</h3>
+                        <p>Urgent waste collection issues</p>
+                        <span class="option-action">Call: +91 98765-00000</span>
+                    </div>
+                </div>
+                
+                <div class="support-option chat" onclick="openLiveChat()">
+                    <div class="option-icon">💬</div>
+                    <div class="option-info">
+                        <h3>Live Chat</h3>
+                        <p>Get instant help from our team</p>
+                        <span class="option-action">Chat Now</span>
+                    </div>
+                    <div class="online-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">5 agents online</span>
+                    </div>
+                </div>
+                
+                <div class="support-option email">
+                    <div class="option-icon">📧</div>
+                    <div class="option-info">
+                        <h3>Email Support</h3>
+                        <p>Detailed assistance within 24 hours</p>
+                        <span class="option-action">support@zerowastex.com</span>
+                    </div>
+                </div>
+                
+                <div class="support-option phone">
+                    <div class="option-icon">📞</div>
+                    <div class="option-info">
+                        <h3>Phone Support</h3>
+                        <p>Talk to our experts directly</p>
+                        <span class="option-action">+91 98765-43210</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="support-content">
+        <div class="container">
+            
+            <!-- Support Categories -->
+            <section class="support-categories">
+                <div class="section-header">
+                    <h2 class="section-title">🎯 Choose Your Support Category</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Select the category that best matches your question for faster assistance</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card" onclick="selectCategory('account')">
+                        <div class="category-icon">👤</div>
+                        <h3>Account & Profile</h3>
+                        <p>Login issues, profile updates, account settings</p>
+                        <div class="category-stats">
+                            <span class="avg-response">Avg: 2 min</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="selectCategory('collection')">
+                        <div class="category-icon">🚛</div>
+                        <h3>Collection & Pickup</h3>
+                        <p>Missed collections, schedule changes, pickup requests</p>
+                        <div class="category-stats">
+                            <span class="avg-response">Avg: 15 min</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="selectCategory('rewards')">
+                        <div class="category-icon">🎁</div>
+                        <h3>Rewards & Points</h3>
+                        <p>Points balance, redemption, rewards catalog</p>
+                        <div class="category-stats">
+                            <span class="avg-response">Avg: 5 min</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="selectCategory('technical')">
+                        <div class="category-icon">⚙️</div>
+                        <h3>Technical Issues</h3>
+                        <p>App problems, website bugs, connectivity issues</p>
+                        <div class="category-stats">
+                            <span class="avg-response">Avg: 10 min</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="selectCategory('billing')">
+                        <div class="category-icon">💳</div>
+                        <h3>Billing & Payments</h3>
+                        <p>Payment issues, billing queries, refunds</p>
+                        <div class="category-stats">
+                            <span class="avg-response">Avg: 30 min</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" onclick="selectCategory('education')">
+                        <div class="category-icon">📚</div>
+                        <h3>Training & Education</h3>
+                        <p>Learning modules, certifications, training programs</p>
+                        <div class="category-stats">
+                            <span class="avg-response">Avg: 1 hour</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>📝 Submit a Support Request</h2>
+                        <p>Can't find what you're looking for? Send us a detailed message and we'll get back to you.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Support Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="account">Account & Profile</option>
+                                <option value="collection">Collection & Pickup</option>
+                                <option value="rewards">Rewards & Points</option>
+                                <option value="technical">Technical Issues</option>
+                                <option value="billing">Billing & Payments</option>
+                                <option value="education">Training & Education</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority" name="priority">
+                                <option value="low">Low - General inquiry</option>
+                                <option value="medium" selected>Medium - Standard support</option>
+                                <option value="high">High - Urgent issue</option>
+                                <option value="critical">Critical - System down</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="Brief description of your issue" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Detailed Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please provide as much detail as possible about your issue or question..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="attachment">Attach Files (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="attachment" name="attachment" multiple accept="image/*,.pdf,.doc,.docx">
+                                <div class="file-upload-text">
+                                    <span class="upload-icon">📎</span>
+                                    <span>Click to attach files or drag and drop</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="updates" name="updates">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Send me updates about my support request via email</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Submit Request</span>
+                                <span class="btn-loading" style="display: none;">Submitting...</span>
+                            </button>
+                            <div class="form-note">
+                                <span class="response-time">Expected response time: 2-24 hours</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Support Info Sidebar -->
+                <div class="support-info">
+                    <div class="info-card">
+                        <h3>⏰ Support Hours</h3>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span class="day">Monday - Friday</span>
+                                <span class="time">9:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Saturday</span>
+                                <span class="time">10:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Sunday</span>
+                                <span class="time">Emergency Only</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Holidays</span>
+                                <span class="time">Limited Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🌐 Regional Offices</h3>
+                        <div class="offices-list">
+                            <div class="office-item">
+                                <h4>Delhi NCR</h4>
+                                <p>📍 Sector 18, Noida<br>📞 +91 120-4567890</p>
+                            </div>
+                            <div class="office-item">
+                                <h4>Mumbai</h4>
+                                <p>📍 Andheri West<br>📞 +91 22-87654321</p>
+                            </div>
+                            <div class="office-item">
+                                <h4>Bangalore</h4>
+                                <p>📍 Koramangala<br>📞 +91 80-98765432</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📊 Live Support Status</h3>
+                        <div class="status-indicators">
+                            <div class="status-item">
+                                <span class="status-dot online"></span>
+                                <span class="status-label">Chat Support</span>
+                                <span class="status-value">Online</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot online"></span>
+                                <span class="status-label">Phone Support</span>
+                                <span class="status-value">Available</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot busy"></span>
+                                <span class="status-label">Email Support</span>
+                                <span class="status-value">High Volume</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2 class="section-title">❓ Frequently Asked Questions</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Find quick answers to the most common questions</p>
+                </div>
+                
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="general">General</button>
+                    <button class="faq-category-btn" data-category="account">Account</button>
+                    <button class="faq-category-btn" data-category="collection">Collection</button>
+                    <button class="faq-category-btn" data-category="rewards">Rewards</button>
+                    <button class="faq-category-btn" data-category="technical">Technical</button>
+                </div>
+                
+                <div class="faq-content">
+                    <!-- General FAQs -->
+                    <div class="faq-category-content active" data-category="general">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What is ZeroWasteX and how does it work?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>ZeroWasteX is a comprehensive waste management platform that connects citizens, waste collectors, and recycling centers. We provide door-to-door collection, smart segregation, and convert waste into valuable resources while rewarding users for eco-friendly actions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Which areas do you currently serve?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We currently operate in 45+ communities across Delhi NCR, Mumbai, Bangalore, Pune, and Chennai. We're rapidly expanding to new areas. Check our service availability on the homepage or contact support for specific locations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How much does the service cost?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our basic waste collection service is free for all users. Premium features like express pickup and detailed analytics are available through subscription plans starting at ₹99/month. Many services actually reward you with points!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What types of waste do you accept?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We accept all types of household waste including organic waste, recyclables (paper, plastic, glass, metal), e-waste, and hazardous materials. Each category has specific collection and processing methods to maximize recycling and minimize environmental impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account FAQs -->
+                    <div class="faq-category-content" data-category="account">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I create an account?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Creating an account is simple! Click "Sign Up" on our homepage, enter your mobile number, verify with OTP, and complete your profile with basic information and address details. You'll be ready to start using our services immediately.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>I forgot my password. How can I reset it?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>On the login page, click "Forgot Password", enter your registered email or mobile number, and you'll receive a password reset link. Follow the instructions to create a new password. If you need help, contact our support team.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Collection FAQs -->
+                    <div class="faq-category-content" data-category="collection">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What are your collection schedules?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Collection schedules vary by area and waste type. Typically: Organic waste (daily), Recyclables (3x/week), E-waste (on-demand), Hazardous (monthly). You can view your personalized schedule in the mobile app or website dashboard.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What if I miss my scheduled pickup?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Don't worry! You can request an express pickup through the app for a small fee, or wait for the next scheduled collection. For premium users, we offer flexible pickup times and missed collection recovery at no extra cost.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Rewards FAQs -->
+                    <div class="faq-category-content" data-category="rewards">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I earn points?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Earn points by: Proper waste segregation (+50 pts), On-time collection participation (+25 pts), Completing training modules (+100 pts), Referring friends (+200 pts), Participating in community events (+150 pts), and maintaining daily streaks (2x multiplier).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How can I redeem my points?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Visit the Rewards section to browse our catalog. Redeem points for shopping vouchers, eco-friendly products, experiences, or donate to environmental causes. Points never expire and can be combined for bigger rewards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical FAQs -->
+                    <div class="faq-category-content" data-category="technical">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>The mobile app is not working properly. What should I do?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Try these steps: 1) Force close and restart the app, 2) Check for app updates in your app store, 3) Clear app cache in settings, 4) Restart your device, 5) Ensure stable internet connection. If issues persist, contact technical support with your device details.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I use ZeroWasteX without a smartphone?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! You can access all services through our website on any device with internet. You can also call our support hotline for assistance with scheduling, account management, and service requests. However, the mobile app provides the best experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Help Resources -->
+            <section class="help-resources">
+                <div class="section-header">
+                    <h2 class="section-title">📖 Help Resources</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Self-service resources to help you get the most out of ZeroWasteX</p>
+                </div>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📹</div>
+                        <h3>Video Tutorials</h3>
+                        <p>Step-by-step video guides for all features</p>
+                        <div class="resource-stats">25 videos • 2.5 hours</div>
+                        <button class="resource-btn">Watch Videos</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>User Guides</h3>
+                        <p>Comprehensive written documentation</p>
+                        <div class="resource-stats">15 guides • Updated weekly</div>
+                        <button class="resource-btn">Read Guides</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">👥</div>
+                        <h3>Community Forum</h3>
+                        <p>Get help from other users and experts</p>
+                        <div class="resource-stats">2.5k members • Active daily</div>
+                        <button class="resource-btn">Join Forum</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">🔧</div>
+                        <h3>Troubleshooting</h3>
+                        <p>Common problems and quick solutions</p>
+                        <div class="resource-stats">50+ solutions • Self-service</div>
+                        <button class="resource-btn">Find Solutions</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">📱</div>
+                        <h3>Mobile App Guide</h3>
+                        <p>Complete guide to using our mobile app</p>
+                        <div class="resource-stats">Interactive tutorial • 15 mins</div>
+                        <button class="resource-btn">Start Tutorial</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">🏆</div>
+                        <h3>Best Practices</h3>
+                        <p>Tips from successful community users</p>
+                        <div class="resource-stats">Expert tips • Case studies</div>
+                        <button class="resource-btn">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-avatar">💬</div>
+            <div class="chat-info">
+                <h4>Live Support</h4>
+                <span class="chat-status">Online • Avg response: 2 min</span>
+            </div>
+            <button class="chat-minimize" onclick="minimizeChat()">−</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-message bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hi! I'm here to help you with any questions about ZeroWasteX. How can I assist you today?</p>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+            <button class="chat-send" onclick="sendChatMessage()">📤</button>
+        </div>
+    </div>
+
+    <!-- Chat Launcher -->
+    <div class="chat-launcher" id="chatLauncher" onclick="openLiveChat()">
+        <div class="launcher-icon">💬</div>
+        <div class="launcher-notification">3</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZeroWasteX Support</h3>
+                    <p>Dedicated support team ready to help you 24/7 with all your waste management needs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Support</h4>
+                    <ul>
+                        <li><a href="tel:+919876543210">📞 Phone Support</a></li>
+                        <li><a href="mailto:support@zerowastex.com">📧 Email Support</a></li>
+                        <li><a href="#chat">💬 Live Chat</a></li>
+                        <li><a href="#emergency">🚨 Emergency Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#guides">User Guides</a></li>
+                        <li><a href="#forum">Community Forum</a></li>
+                        <li><a href="#status">Service Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZeroWasteX Support Center. All rights reserved. | Smart India Hackathon Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact-support.js"></script>
+    
+</body>
+</html>
+<style>
+    /* Contact Support Page Styles */
+
+/* Hero Section */
+.support-hero {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 50%, #0d47a1 100%);
+    color: white;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.support-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    animation: supportFloat 12s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+.particle:nth-child(3) { top: 60%; left: 15%; animation-delay: 4s; }
+.particle:nth-child(4) { bottom: 30%; right: 20%; animation-delay: 6s; }
+.particle:nth-child(5) { bottom: 20%; left: 25%; animation-delay: 8s; }
+.particle:nth-child(6) { top: 40%; right: 30%; animation-delay: 10s; }
+
+@keyframes supportFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.15; }
+    25% { transform: translateY(-30px) rotate(90deg) scale(1.1); opacity: 0.25; }
+    50% { transform: translateY(-60px) rotate(180deg) scale(1.2); opacity: 0.3; }
+    75% { transform: translateY(-30px) rotate(270deg) scale(1.1); opacity: 0.25; }
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #fff, #bbdefb, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* Quick Support Options */
+.quick-support {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.support-option {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.support-option:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.support-option.emergency {
+    border: 2px solid #ff6b6b;
+    background: rgba(255, 107, 107, 0.2);
+}
+
+.support-option.chat:hover {
+    border: 2px solid #4caf50;
+}
+
+.option-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.option-info h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.option-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.option-action {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #bbdefb;
+    display: block;
+}
+
+.online-indicator {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Main Content */
+.support-content {
+    padding: 80px 0;
+    background: #f8fffe;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #2196f3, #1976d2);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Support Categories */
+.support-categories {
+    margin-bottom: 100px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    border-color: #2196f3;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.category-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.category-stats {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.form-container {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: #0d47a1;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2196f3;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.file-upload {
+    position: relative;
+    border: 2px dashed #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload:hover {
+    border-color: #2196f3;
+    background: #f3f9ff;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+}
+
+.upload-icon {
+    font-size: 2rem;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+    background: #2196f3;
+    border-color: #2196f3;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    position: relative;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-note {
+    text-align: center;
+}
+
+.response-time {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Support Info Sidebar */
+.support-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+    color: #0d47a1;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hours-list,
+.offices-list,
+.status-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hours-item,
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hours-item:last-child,
+.status-item:last-child {
+    border-bottom: none;
+}
+
+.day,
+.status-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.time,
+.status-value {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.office-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.office-item h4 {
+    color: #0d47a1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.office-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.status-dot.online {
+    background: #4caf50;
+}
+
+.status-dot.busy {
+    background: #ff9800;
+}
+
+.status-dot.offline {
+    background: #f44336;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 100px;
+}
+
+.faq-categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.faq-category-btn {
+    padding: 12px 25px;
+    background: white;
+    color: #666;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.faq-category-btn.active,
+.faq-category-btn:hover {
+    background: #2196f3;
+    color: white;
+    border-color: #2196f3;
+    transform: translateY(-2px);
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-category-content {
+    display: none;
+}
+
+.faq-category-content.active {
+    display: block;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+    color: #2196f3;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    color: #2196f3;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 30px 25px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Help Resources */
+.help-resources {
+    margin-bottom: 50px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid #2196f3;
+}
+
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.resource-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.resource-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.resource-stats {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.resource-btn {
+    background: transparent;
+    color: #2196f3;
+    border: 2px solid #2196f3;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.resource-btn:hover {
+    background: #2196f3;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Live Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    max-height: 500px;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-avatar {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.chat-info {
+    flex: 1;
+}
+
+.chat-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 3px 0;
+}
+
+.chat-status {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.chat-minimize {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.chat-minimize:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.chat-message {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.message-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    background: #f0f0f0;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-content p {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px 20px;
+    border-top: 1px solid #f0f0f0;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #2196f3;
+}
+
+.chat-send {
+    background: #2196f3;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.chat-send:hover {
+    background: #1976d2;
+    transform: scale(1.05);
+}
+
+/* Chat Launcher */
+.chat-launcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.chat-launcher:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+.launcher-icon {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.launcher-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4444;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    animation: notificationBounce 2s infinite;
+}
+
+@keyframes notificationBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .quick-support {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .support-option {
+        padding: 25px 20px;
+    }
+    
+    .categories-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-categories {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .faq-category-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .chat-widget {
+        width: 300px;
+        right: 10px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .support-option {
+        padding: 20px 15px;
+    }
+    
+    .form-container {
+        padding: 25px 20px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .faq-question {
+        padding: 20px 15px;
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 15px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 15px 20px;
+    }
+    
+    .chat-widget {
+        width: 280px;
+        bottom: 90px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+</style>

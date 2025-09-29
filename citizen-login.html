@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Portal - Login & Signup | ZeroWasteX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="citizen-login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-placeholder">
+                    <img src="SIH2.webp" alt="Smart India Hackathon" class="hackathon-logo">
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">Join Us</a>
+                <a href="#services" class="nav-link">What We Do</a>
+                <a href="authority-login.html" class="nav-link">Authority Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login/Signup Container -->
+    <section class="auth-container">
+        <div class="auth-card">
+            <!-- ZeroWasteX Logo Section -->
+            <div class="brand-header">
+                <div class="brand-logo">
+                    <img src="newlogo.png" alt="ZeroWasteX Logo" class="brand-logo-img">
+                </div>
+                <h1 class="brand-title">
+                    <span class="title-green">Zero</span><span class="title-black">Waste</span><span class="title-green">X</span>
+                </h1>
+                <p class="brand-subtitle">Join the Green Revolution</p>
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div class="toggle-container">
+                <button class="toggle-btn active" id="loginToggle">Login</button>
+                <button class="toggle-btn" id="signupToggle">Sign Up</button>
+                <div class="toggle-slider"></div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="form-container" id="loginForm">
+                <form class="auth-form" id="citizenLoginForm">
+                    <div class="form-group">
+                        <label for="loginEmail" class="form-label">Email Address</label>
+                        <input type="email" id="loginEmail" name="email" class="form-input" placeholder="Enter your email" required>
+                        <div class="input-icon">📧</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" id="loginPassword" name="password" class="form-input" placeholder="Enter your password" required>
+                        <div class="input-icon">🔒</div>
+                        <button type="button" class="toggle-password" data-target="loginPassword">👁️</button>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#forgot-password" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="auth-btn login-btn">
+                        <span class="btn-text">Login to Dashboard</span>
+                        <div class="btn-icon">→</div>
+                    </button>
+                </form>
+
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google">🔍 Google</button>
+                        <button class="social-btn facebook">📘 Facebook</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-container hidden" id="signupForm">
+                <form class="auth-form" id="citizenSignupForm">
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="First name" required>
+                            <div class="input-icon">👤</div>
+                        </div>
+                        <div class="form-group half">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Last name" required>
+                            <div class="input-icon">👤</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail" class="form-label">Email Address</label>
+                        <input type="email" id="signupEmail" name="email" class="form-input" placeholder="Enter your email" required>
+                        <div class="input-icon">📧</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phone" class="form-input" placeholder="+91 98765 43210" required>
+                        <div class="input-icon">📱</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" id="address" name="address" class="form-input" placeholder="Enter your full address" required>
+                        <div class="input-icon">🏠</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" id="city" name="city" class="form-input" placeholder="City" required>
+                            <div class="input-icon">🏙️</div>
+                        </div>
+                        <div class="form-group half">
+                            <label for="pincode" class="form-label">PIN Code</label>
+                            <input type="text" id="pincode" name="pincode" class="form-input" placeholder="400001" required>
+                            <div class="input-icon">📍</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" id="signupPassword" name="password" class="form-input" placeholder="Create a strong password" required>
+                        <div class="input-icon">🔒</div>
+                        <button type="button" class="toggle-password" data-target="signupPassword">👁️</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm your password" required>
+                        <div class="input-icon">🔐</div>
+                        <button type="button" class="toggle-password" data-target="confirmPassword">👁️</button>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            I agree to <a href="#terms">Terms & Conditions</a> and <a href="#privacy">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-btn signup-btn">
+                        <span class="btn-text">Create Account</span>
+                        <div class="btn-icon">✨</div>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="benefits-section">
+                <h3>Why Join ZeroWasteX?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎁</div>
+                        <span>Earn Rewards</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📊</div>
+                        <span>Track Impact</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🚛</div>
+                        <span>Easy Pickup</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌱</div>
+                        <span>Go Green</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="background-particles">
+            <div class="particle particle-1">♻️</div>
+            <div class="particle particle-2">🌿</div>
+            <div class="particle particle-3">🗑️</div>
+            <div class="particle particle-4">⚡</div>
+            <div class="particle particle-5">🌍</div>
+        </div>
+    </section>
+
+        <script src="script.js"></script>
+    <script>
+        // API Configuration
+        const API_URL = 'https://zerowastex-backend.onrender.com/api/auth';
+
+        // DOM Elements
+        const loginToggle = document.getElementById('loginToggle');
+        const signupToggle = document.getElementById('signupToggle');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const toggleSlider = document.querySelector('.toggle-slider');
+        const citizenLoginForm = document.getElementById('citizenLoginForm');
+        const citizenSignupForm = document.getElementById('citizenSignupForm');
+
+        // Toggle between Login and Signup
+        function switchToLogin() {
+            loginToggle.classList.add('active');
+            signupToggle.classList.remove('active');
+            loginForm.classList.remove('hidden');
+            signupForm.classList.add('hidden');
+            toggleSlider.classList.remove('signup');
+        }
+
+        function switchToSignup() {
+            signupToggle.classList.add('active');
+            loginToggle.classList.remove('active');
+            signupForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+            toggleSlider.classList.add('signup');
+        }
+
+        // Event listeners for toggle buttons
+        loginToggle.addEventListener('click', switchToLogin);
+        signupToggle.addEventListener('click', switchToSignup);
+
+        // Password toggle functionality
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetInput = document.getElementById(targetId);
+                
+                if (targetInput.type === 'password') {
+                    targetInput.type = 'text';
+                    this.textContent = '🙈';
+                } else {
+                    targetInput.type = 'password';
+                    this.textContent = '👁️';
+                }
+            });
+        });
+
+        // Show notification message
+        function showNotification(message, type = 'success') {
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-icon">${type === 'success' ? '✅' : '❌'}</span>
+                    <span class="notification-text">${message}</span>
+                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+                </div>
+            `;
+            
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; z-index: 1000;
+                background: ${type === 'success' ? '#d4edda' : '#f8d7da'};
+                color: ${type === 'success' ? '#155724' : '#721c24'};
+                border: 1px solid ${type === 'success' ? '#c3e6cb' : '#f5c6cb'};
+                border-radius: 10px; padding: 15px; max-width: 400px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            `;
+
+            document.body.appendChild(notification);
+            setTimeout(() => { if (notification.parentNode) notification.remove(); }, 5000);
+        }
+
+        // Login form handler
+        citizenLoginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = citizenLoginForm.querySelector('.auth-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            
+            if (!email || !password) {
+                showNotification('Please fill in all fields', 'error');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="btn-text">Logging in...</span><div class="btn-icon">⏳</div>`;
+
+            try {
+                const response = await fetch(`${API_URL}/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    localStorage.setItem('authToken', data.token);
+                    localStorage.setItem('userData', JSON.stringify(data.user));
+                    showNotification(`Welcome back, ${data.user.name}!`, 'success');
+                    setTimeout(() => { window.location.href = 'index.html'; }, 1500);
+                } else {
+                    showNotification(data.message || 'Login failed', 'error');
+                }
+
+            } catch (error) {
+                showNotification('Cannot connect to server. Make sure backend is running!', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+
+        // Signup form handler
+        citizenSignupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = citizenSignupForm.querySelector('.auth-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const phone = document.getElementById('phoneNumber').value.trim();
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const agreeTerms = document.getElementById('agreeTerms').checked;
+            
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                showNotification('Please fill in all required fields', 'error');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showNotification('Passwords do not match', 'error');
+                return;
+            }
+
+            if (!agreeTerms) {
+                showNotification('Please agree to Terms & Conditions', 'error');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="btn-text">Creating Account...</span><div class="btn-icon">⏳</div>`;
+
+            try {
+                const response = await fetch(`${API_URL}/signup`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: `${firstName} ${lastName}`,
+                        email: email,
+                        password: password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    localStorage.setItem('authToken', data.token);
+                    localStorage.setItem('userData', JSON.stringify(data.user));
+                    showNotification(`Welcome to ZeroWasteX, ${firstName}!`, 'success');
+                    setTimeout(() => { window.location.href = 'index.html'; }, 2000);
+                } else {
+                    showNotification(data.message || 'Signup failed', 'error');
+                }
+
+            } catch (error) {
+                showNotification('Cannot connect to server. Make sure backend is running!', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const headerNav = document.querySelector('.header-nav');
+            
+            if (hamburger && headerNav) {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (headerNav.classList.contains('mobile-open')) {
+                        headerNav.classList.remove('mobile-open');
+                        hamburger.classList.remove('active');
+                    } else {
+                        headerNav.classList.add('mobile-open');
+                        hamburger.classList.add('active');
+                    }
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!hamburger.contains(e.target) && !headerNav.contains(e.target)) {
+                        headerNav.classList.remove('mobile-open');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+<style>
+    /* Citizen Login/Signup Page Styles */
+.auth-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e6f3ff 0%, #f0f8f0 50%, #e6f3ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+    padding: 50px 45px;
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeInUp 1s ease-out;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Brand Header */
+.brand-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.brand-logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #f0f3f1, #fcfdfc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+.brand-logo-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.title-green {
+    color: #1e5d3a;
+}
+
+.title-black {
+    color: #333;
+}
+
+.brand-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Toggle Buttons */
+.toggle-container {
+    position: relative;
+    display: flex;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 30px;
+    border: 2px solid #e9ecef;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 15px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+    z-index: 2;
+    position: relative;
+}
+
+.toggle-btn.active {
+    color: white;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background: linear-gradient(135deg, #2e8b57, #4caf50);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+}
+
+.toggle-slider.signup {
+    transform: translateX(100%);
+}
+
+/* Form Styles */
+.form-container {
+    transition: all 0.4s ease;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+.auth-form {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 20px 15px 45px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    font-family: inherit;
+}
+
+.form-input:focus {
+    border-color: #2e8b57;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 43px;
+    font-size: 16px;
+    color: #2e8b57;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 43px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #2e8b57;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+    margin-top: 2px;
+    transform: scale(1.1);
+    accent-color: #2e8b57;
+}
+
+.checkbox-container a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+.forgot-link {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #1e5d3a;
+    text-decoration: underline;
+}
+
+/* Auth Buttons */
+.auth-btn {
+    width: 100%;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #2e8b57, #4caf50);
+    color: white;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.3);
+}
+
+.auth-btn:active {
+    transform: translateY(0);
+}
+
+/* Social Login */
+.social-login {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.social-login p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.social-btn:hover {
+    border-color: #2e8b57;
+    background: #f8f9fa;
+    transform: translateY(-1px);
+}
+
+/* Benefits Section */
+.benefits-section {
+    border-top: 1px solid #e9ecef;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.benefits-section h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: #e6f3ff;
+    transform: translateY(-2px);
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+}
+
+/* Background Particles */
+.background-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.08;
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.particle-1 { top: 5%; left: 5%; animation-delay: 0s; }
+.particle-2 { top: 15%; right: 10%; animation-delay: 2s; }
+.particle-3 { top: 60%; left: 8%; animation-delay: 4s; }
+.particle-4 { bottom: 25%; right: 5%; animation-delay: 1s; }
+.particle-5 { bottom: 5%; left: 15%; animation-delay: 3s; }
+
+@keyframes particleFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+        opacity: 0.08;
+    }
+    50% { 
+        transform: translateY(-30px) rotate(180deg); 
+        opacity: 0.15;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 90px 15px 15px;
+    }
+    
+    .auth-card {
+        padding: 40px 25px;
+    }
+    
+    .brand-title {
+        font-size: 1.8rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toggle-btn {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .form-input {
+        padding: 12px 15px 12px 40px;
+        font-size: 0.95rem;
+    }
+    
+    .input-icon {
+        top: 37px;
+        font-size: 14px;
+    }
+    
+    .toggle-password {
+        top: 37px;
+    }
+}
+
+</style>
